@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".register.SecondStepFragment">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/step2"
+        android:layout_marginTop="@dimen/_12sdp"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_100sdp"
+        >
+        <TextView
+            android:id="@+id/label"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="wrap_content"
+            android:text="@string/personal_informations"
+            android:layout_marginStart="@dimen/_40sdp"
+            android:textSize="@dimen/_25ssp"
+            android:textColor="@color/blueBack"
+            />
+
+        <EditText
+            android:id="@+id/fname"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="wrap_content"
+            android:hint="@string/nom"
+            android:layout_below="@id/label"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_25sdp"
+            />
+        <EditText
+            android:id="@+id/lname"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="wrap_content"
+            android:hint="@string/prenom"
+            android:layout_below="@id/fname"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_25sdp"
+            />
+        <EditText
+            android:id="@+id/speciality"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="wrap_content"
+            android:hint="@string/specialite"
+            android:layout_below="@id/lname"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_25sdp"
+            />
+        <EditText
+            android:id="@+id/birthdate"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="wrap_content"
+            android:hint="@string/birth_date_place"
+            android:layout_below="@id/speciality"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_25sdp"
+            />
+        <EditText
+            android:id="@+id/phone"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="wrap_content"
+            android:hint="@string/numero_de_telephone"
+            android:layout_below="@id/birthdate"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_25sdp"
+            />
+        <EditText
+            android:id="@+id/emailE"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="wrap_content"
+            android:hint="@string/email_electronique"
+            android:layout_below="@id/phone"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_25sdp"
+            />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/nextStep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/suivant"
+            android:drawableEnd="@drawable/ic_baseline_navigate_next_24"
+            android:background="@color/white"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/_10sdp"
+            />
+
+    </RelativeLayout>
+
+
+</FrameLayout>

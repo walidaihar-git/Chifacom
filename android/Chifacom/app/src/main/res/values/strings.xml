@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Chifacom</string>
+    <string name="nouveau_membre_s_inscrire">Nouveau membre ? S\'inscrire</string>
+    <string name="bienvenu_en_chifacom_app">Bienvenu en Chifacom app</string>
+    <string name="choisir_votre_language">Choisissez votre langue</string>
+    <string name="soumettre">Soumettre</string>
+    <string name="pour_les_docteurs">pour les docteurs</string>
+    <string name="s_identifier">S\'identifier</string>
+    <string name="votre_email_ici">Votre Email ici</string>
+    <string name="votre_mot_de_passe_ici">Votre Mot de passe ici</string>
+
+    <string-array name="langs">
+        <item>Francais</item>
+        <item>العربية</item>
+        <item>English</item>
+
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+<!--    <string name="hello_blank_fragment">Hello blank fragment</string>-->
+    <string name="je_suis_un_une">Je suis un/une ..</string>
+    <string name="docteur">Docteur</string>
+    <string name="cabinet">Cabinet</string>
+    <string name="clinique">Clinique</string>
+    <string name="personal_informations">Informations personnelles</string>
+    <string name="nom">Nom</string>
+    <string name="prenom">Prenom</string>
+    <string name="specialite">Specialite</string>
+    <string name="birth_date_place">Date / lieu de naissance</string>
+    <string name="email_electronique">Email Electronique</string>
+    <string name="numero_de_telephone">Numero de telephone</string>
+    <string name="suivant">Suivant</string>
+    <string name="adresse_et_localisation">Adresse et localisation</string>
+    <string name="ecriver_votre_adresse">Ecriver votre adresse</string>
+    <string name="se_situer_sur_google_maps">Se situer sur google maps</string>
+    <string name="informations_d_identit">Informations d\'identité</string>
+    <string name="scannez_votre_carte_d_identit_biom_trique">Scannez votre carte d\'identité biométrique</string>
+    <string name="cliquez_à_nouveau_pour_quitter">cliquez à nouveau pour quitter</string>
+</resources>
