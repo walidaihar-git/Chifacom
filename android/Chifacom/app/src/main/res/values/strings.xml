@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Chifacom</string>
-    <string name="nouveau_membre_s_inscrire">Nouveau membre ? S\'inscrire</string>
+    <string name="nouveau_membre_s_inscrire">Nouveau membre ? S\'inscrire !</string>
     <string name="bienvenu_en_chifacom_app">Bienvenu en Chifacom app</string>
     <string name="choisir_votre_language">Choisissez votre langue</string>
     <string name="soumettre">Soumettre</string>
@@ -16,7 +16,7 @@
 
     </string-array>
     <!-- TODO: Remove or change this placeholder text -->
-<!--    <string name="hello_blank_fragment">Hello blank fragment</string>-->
+    <!--    <string name="hello_blank_fragment">Hello blank fragment</string>-->
     <string name="je_suis_un_une">Je suis un/une ..</string>
     <string name="docteur">Docteur</string>
     <string name="cabinet">Cabinet</string>

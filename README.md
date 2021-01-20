@@ -12,5 +12,7 @@ Platforme Used :
  - register web service 
  - database using mysql 
 
-// test
+update1 Akram:
+ - add activity loading  &  change some bgs .
+ - remake activities loagin, choose language .
  

@@ -23,7 +23,7 @@ public class FirstRunActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_first_run);
+        setContentView(R.layout.activity_choose_language);
 
 // forward to login form after submitting
         submit = findViewById(R.id.submitLang);
@@ -36,13 +36,12 @@ public class FirstRunActivity extends AppCompatActivity {
         });
 
 
-
 //design welcome
         textView = findViewById(R.id.welcome);
         String text = getResources().getString(R.string.bienvenu_en_chifacom_app);
         SpannableString spannableString = new SpannableString(text);
         StyleSpan boldSpan = new StyleSpan(Typeface.BOLD);
-        spannableString.setSpan(boldSpan,12,text.length()-1, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        spannableString.setSpan(boldSpan,11,text.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
         textView.setText(spannableString);
 
 //spinner

@@ -10,9 +10,9 @@
 
     //custom colors
     <color name="blueBack">#0071BC</color>
-    <color name="blueBottom">#1D7DBD</color>
-    <color name="blue">#0171B9</color>
-    <color name="green">#017175</color>
+    <color name="blueBottom">#26C4C4C4</color>
+    <color name="blue">#0071BC</color>
+    <color name="green">#007173</color>
     <color name="langBlue">#3E93CC</color>
     <color name="langGreen">#3F949B</color>
     <color name="cloud">#ecf0f1</color>
