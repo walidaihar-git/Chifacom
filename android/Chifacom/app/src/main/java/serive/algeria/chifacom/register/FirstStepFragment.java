@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 import serive.algeria.chifacom.IonBackPressed;
 import serive.algeria.chifacom.LoginActivity;
 import serive.algeria.chifacom.R;
+import serive.algeria.chifacom.RegisterActivity;
 
 public class FirstStepFragment extends Fragment implements View.OnClickListener, IonBackPressed {
 

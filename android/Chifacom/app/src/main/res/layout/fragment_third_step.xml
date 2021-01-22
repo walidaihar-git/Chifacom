@@ -5,76 +5,79 @@
     android:layout_height="match_parent"
     tools:context=".register.ThirdStepFragment">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/step3"
-        android:layout_marginTop="@dimen/_12sdp"
-        />
-
     <RelativeLayout
-        android:id="@+id/container"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_100sdp"
+        android:layout_height="match_parent"
         >
+
+        <RelativeLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/mapFragment"
+            >
+
+            <TextView
+                android:id="@+id/label"
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_40sdp"
+                android:text="@string/adresse_et_localisation"
+                android:textColor="@color/blueBack"
+                android:textSize="@dimen/_25ssp"
+                android:layout_margin="@dimen/_20sdp"
+                android:fontFamily="@font/nexa_light"
+                />
+
+            <EditText
+                android:id="@+id/address"
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:hint="@string/ecriver_votre_adresse"
+                android:textSize="@dimen/_12ssp"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/nexa_light"
+                android:background="@drawable/bgsss"
+
+                />
+
+            <TextView
+                android:id="@+id/labelMap"
+                android:layout_width="146dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/nexa_light"
+                android:text="@string/se_situer_sur_google_maps"
+                android:textSize="@dimen/_18ssp"
+                android:textAlignment="center"
+                android:layout_marginBottom="@dimen/_10sdp"/>
+
+
+        </RelativeLayout>
+
         <TextView
-            android:id="@+id/label"
-            android:layout_width="@dimen/_150sdp"
-            android:layout_height="wrap_content"
-            android:text="@string/adresse_et_localisation"
-            android:layout_marginStart="@dimen/_40sdp"
-            android:textSize="@dimen/_25ssp"
-            android:textColor="@color/blueBack"
-            />
+            android:id="@+id/mapFragment"
+            android:background="@color/blueBack"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_160sdp"
+            android:text="MAP"
+            android:gravity="center"
 
-        <EditText
-            android:id="@+id/address"
-            android:layout_width="@dimen/_200sdp"
-            android:layout_height="wrap_content"
-            android:hint="@string/ecriver_votre_adresse"
-            android:layout_below="@id/label"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="@dimen/_25sdp"
-            android:textSize="@dimen/_17ssp"
-            />
-
-        <TextView
-            android:id="@+id/labelMap"
-            android:layout_width="@dimen/_108sdp"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/address"
-            android:layout_marginTop="@dimen/_100sdp"
-            android:text="@string/se_situer_sur_google_maps"
-            android:textSize="@dimen/_18ssp"
-            android:layout_centerHorizontal="true"
-            />
-
-
+            android:layout_alignParentBottom="true"/>
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/nextStep"
+            android:id="@+id/nextStep3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/suivant"
-            android:drawableEnd="@drawable/ic_baseline_navigate_next_24"
-            android:background="@color/white"
             android:layout_alignParentEnd="true"
             android:layout_marginEnd="@dimen/_10sdp"
-            />
-
-        <fragment
-            android:id="@+id/mapFragment"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            class="com.google.android.gms.maps.MapFragment"
-            android:layout_below="@id/labelMap"
-            android:layout_marginTop="@dimen/_10sdp"
-            />
-
-
+            android:background="@android:color/transparent"
+            android:drawableEnd="@drawable/ic_baseline_navigate_next_24"
+            android:text="@string/suivant" />
     </RelativeLayout>
-
-
 
 
 </FrameLayout>

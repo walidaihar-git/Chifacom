@@ -51,7 +51,7 @@ public class SecondStepFragment extends Fragment implements View.OnClickListener
         email = view.findViewById(R.id.emailE);
 
 
-    next = view.findViewById(R.id.nextStep);
+    next = view.findViewById(R.id.nextStep2);
     next.setOnClickListener(this);
 
         return view;
@@ -67,6 +67,16 @@ public class SecondStepFragment extends Fragment implements View.OnClickListener
             fragmentTransaction.replace(R.id.fragment_container, fragment);
             fragmentTransaction.addToBackStack(null);
             fragmentTransaction.commit();
+
+/*
+ Fragment fragment = new SecondStepFragment();
+            FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.setCustomAnimations(R.anim.slide_in_right,R.anim.slide_out_left);
+            fragmentTransaction.replace(R.id.fragment_container, fragment);
+            fragmentTransaction.addToBackStack(null);
+            fragmentTransaction.commit();
+*/
         }
     }
 }

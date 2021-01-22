@@ -84,7 +84,7 @@
         <EditText
             android:id="@+id/email"
             android:layout_width="@dimen/_200sdp"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/_18sdp"
             android:fontFamily="@font/nexa_light"
             android:hint="@string/votre_email_ici"
             android:textAlignment="center"
@@ -94,9 +94,11 @@
             app:layout_constraintStart_toStartOf="parent"
             android:inputType="textEmailAddress"
             android:importantForAutofill="no"
-            android:drawableBottom="@drawable/input_bg"/>
+            android:background="@drawable/ic_bg_input"
+            android:textSize="@dimen/_12ssp"
+            />
 
-        <TextView
+        <View
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="0.2"/>

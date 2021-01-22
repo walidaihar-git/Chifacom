@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Chifacom">
-        <activity android:name=".LoadingActivity"></activity>
+        <activity android:name=".register.Register"></activity>
+        <activity android:name=".LoadingActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".FirstRunActivity" />

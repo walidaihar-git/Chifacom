@@ -46,7 +46,7 @@ EditText address ;
         //get views
         address = view.findViewById(R.id.address);
 
-        nextStep = view.findViewById(R.id.nextStep);
+        nextStep = view.findViewById(R.id.nextStep3);
         nextStep.setOnClickListener(this);
 
         return view;
