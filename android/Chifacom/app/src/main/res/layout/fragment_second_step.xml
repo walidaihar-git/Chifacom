@@ -35,72 +35,76 @@
         <EditText
             android:id="@+id/fname"
             android:layout_width="@dimen/_200sdp"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/_35sdp"
             android:layout_marginTop="@dimen/_25sdp"
             android:hint="@string/nom"
             android:importantForAutofill="no"
             android:inputType="textPersonName"
-            android:textAlignment="center"
             android:fontFamily="@font/nexa_light"
+            android:background="@drawable/bgsss"
+            android:paddingHorizontal="@dimen/_8sdp"
             />
 
         <EditText
             android:id="@+id/lname"
             android:layout_width="@dimen/_200sdp"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/_35sdp"
             android:layout_marginTop="@dimen/_25sdp"
             android:hint="@string/prenom"
             android:importantForAutofill="no"
             android:inputType="textPersonName"
-            android:textAlignment="center"
             android:fontFamily="@font/nexa_light"
+            android:background="@drawable/bgsss"
+            android:paddingHorizontal="@dimen/_8sdp"
             />
 
         <EditText
             android:id="@+id/speciality"
             android:layout_width="@dimen/_200sdp"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/_35sdp"
             android:layout_marginTop="@dimen/_25sdp"
             android:hint="@string/specialite"
             android:importantForAutofill="no"
             android:inputType="text"
-            android:textAlignment="center" />
+            android:background="@drawable/bgsss"
+            android:paddingHorizontal="@dimen/_8sdp"/>
 
         <EditText
             android:id="@+id/birthdate"
             android:layout_width="@dimen/_200sdp"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/_35sdp"
             android:layout_marginTop="@dimen/_25sdp"
             android:hint="@string/birth_date_place"
             android:importantForAutofill="no"
             android:inputType="date"
-            android:textAlignment="center"
             android:fontFamily="@font/nexa_light"
-            />
+            android:background="@drawable/bgsss"
+            android:paddingHorizontal="@dimen/_8sdp"/>
 
         <EditText
             android:id="@+id/phone"
             android:layout_width="@dimen/_200sdp"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/_35sdp"
             android:layout_marginTop="@dimen/_25sdp"
             android:hint="@string/numero_de_telephone"
             android:importantForAutofill="no"
             android:inputType="phone"
-            android:textAlignment="center" />
+            android:background="@drawable/bgsss"
+            android:paddingHorizontal="@dimen/_8sdp"/>
 
         <EditText
             android:id="@+id/emailE"
             android:layout_width="@dimen/_200sdp"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/_35sdp"
             android:layout_below="@id/phone"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="@dimen/_25sdp"
             android:hint="@string/email_electronique"
             android:importantForAutofill="no"
             android:inputType="textEmailAddress"
-            android:textAlignment="center"
             android:fontFamily="@font/nexa_light"
-            />
+            android:background="@drawable/bgsss"
+            android:paddingHorizontal="@dimen/_8sdp"/>
     </LinearLayout>
     </androidx.core.widget.NestedScrollView>
     <androidx.appcompat.widget.AppCompatButton

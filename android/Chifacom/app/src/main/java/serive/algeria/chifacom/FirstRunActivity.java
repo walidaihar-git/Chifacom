@@ -60,7 +60,7 @@ public class FirstRunActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String selectedItem = spinner.getItemAtPosition(position).toString();
 //selectedItem = selected language
-                Toast.makeText(getApplicationContext(),selectedItem,Toast.LENGTH_LONG).show();
+              //  Toast.makeText(getApplicationContext(),selectedItem,Toast.LENGTH_LONG).show();
             }
 
             @Override

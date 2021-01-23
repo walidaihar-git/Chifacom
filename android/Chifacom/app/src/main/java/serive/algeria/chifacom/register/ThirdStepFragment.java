@@ -1,8 +1,10 @@
 package serive.algeria.chifacom.register;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.widget.AppCompatButton;
+import androidx.appcompat.widget.ButtonBarLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -13,12 +15,14 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
+import serive.algeria.chifacom.MapsActivity;
 import serive.algeria.chifacom.R;
 
 
 public class ThirdStepFragment extends Fragment implements View.OnClickListener{
 
 AppCompatButton nextStep ;
+ButtonBarLayout btnMap;
 EditText address ;
 
     public ThirdStepFragment() {
@@ -43,11 +47,16 @@ EditText address ;
 
         View view =  inflater.inflate(R.layout.fragment_third_step, container, false);
 
+
+
         //get views
         address = view.findViewById(R.id.address);
 
         nextStep = view.findViewById(R.id.nextStep3);
         nextStep.setOnClickListener(this);
+
+        btnMap=view.findViewById(R.id.mapFragment);
+        btnMap.setOnClickListener(this);
 
         return view;
     }
@@ -62,6 +71,9 @@ EditText address ;
             fragmentTransaction.replace(R.id.fragment_container, fragment);
             fragmentTransaction.addToBackStack(null);
             fragmentTransaction.commit();
+        }
+        if (v==btnMap){
+
         }
     }
 }

@@ -27,6 +27,7 @@ public class LoginActivity extends AppCompatActivity {
         password=findViewById(R.id.password);
 
         register = findViewById(R.id.registerNav);
+
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -49,5 +50,9 @@ public class LoginActivity extends AppCompatActivity {
     public void onBackPressed() {
         finishAffinity();
         System.exit(0);
+    }
+
+    public void login(View view) {
+        startActivity(new Intent(this.getApplicationContext(), MapsActivity.class));
     }
 }

@@ -35,4 +35,7 @@
     <string name="informations_d_identit">Informations d\'identité</string>
     <string name="scannez_votre_carte_d_identit_biom_trique">Scannez votre carte d\'identité biométrique</string>
     <string name="cliquez_à_nouveau_pour_quitter">cliquez à nouveau pour quitter</string>
+    <string name="signin">S\'Authentifier</string>
+    <string name="forgetPassword">Mot de passe Oublié ?</string>
+    <string name="title_activity_maps">Map</string>
 </resources>

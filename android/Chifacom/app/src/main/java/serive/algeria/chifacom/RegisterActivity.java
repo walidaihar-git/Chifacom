@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.widget.FrameLayout;
 
@@ -36,7 +37,9 @@ public class RegisterActivity extends AppCompatActivity {
 
     }
 
-
+    public Context RegisterView(){
+     return RegisterActivity.this;
+    }
     @Override
     public void onBackPressed() {
         Fragment fragment = getSupportFragmentManager().findFragmentById(R.id.fragment_container);

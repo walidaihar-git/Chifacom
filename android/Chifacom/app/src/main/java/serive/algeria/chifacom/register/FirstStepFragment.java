@@ -11,6 +11,7 @@ import androidx.fragment.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import serive.algeria.chifacom.IonBackPressed;
 import serive.algeria.chifacom.LoginActivity;
@@ -49,7 +50,6 @@ public class FirstStepFragment extends Fragment implements View.OnClickListener,
         clinicNav.setOnClickListener(this);
 
 
-
         return view;
     }
 
@@ -65,7 +65,10 @@ public class FirstStepFragment extends Fragment implements View.OnClickListener,
             fragmentTransaction.setCustomAnimations(R.anim.slide_in_right,R.anim.slide_out_left);
             fragmentTransaction.replace(R.id.fragment_container, fragment);
             fragmentTransaction.addToBackStack(null);
+
             fragmentTransaction.commit();
+
+
         }
         if (v==cabinetNav){
             // do the same thing ,

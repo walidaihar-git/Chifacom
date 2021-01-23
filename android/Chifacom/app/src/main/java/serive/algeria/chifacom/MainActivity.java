@@ -17,7 +17,6 @@ public class MainActivity extends AppCompatActivity {
         //save the first run to skip it next time
         SharedPreferences prefs = getSharedPreferences("prefs",MODE_PRIVATE);
         boolean firstStart = prefs.getBoolean("firstStart",true);
-
         startActivity(new Intent(this,LoadingActivity.class));
         finish();
 
