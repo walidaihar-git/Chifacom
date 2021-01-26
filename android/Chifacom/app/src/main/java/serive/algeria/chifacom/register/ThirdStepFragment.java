@@ -15,14 +15,15 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
+import serive.algeria.chifacom.IonBackPressed;
 import serive.algeria.chifacom.MapsActivity;
 import serive.algeria.chifacom.R;
 
 
-public class ThirdStepFragment extends Fragment implements View.OnClickListener{
+public class ThirdStepFragment extends Fragment implements View.OnClickListener, IonBackPressed {
 
 AppCompatButton nextStep ;
-ButtonBarLayout btnMap;
+AppCompatButton btnMap;
 EditText address ;
 
     public ThirdStepFragment() {
@@ -68,12 +69,30 @@ EditText address ;
             FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.setCustomAnimations(R.anim.slide_in_right,R.anim.slide_out_left);
+            getActivity().findViewById(R.id.step4).setBackgroundColor(getResources().getColor(R.color.blueBack));
             fragmentTransaction.replace(R.id.fragment_container, fragment);
             fragmentTransaction.addToBackStack(null);
             fragmentTransaction.commit();
         }
         if (v==btnMap){
 
+        }
+    }
+
+    @Override
+    public boolean onBackPressed() {
+        if (true) {
+            //action not popBackStack
+            Fragment fragment = new SecondStepFragment();
+            FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            getActivity().findViewById(R.id.step3).setBackgroundColor(getResources().getColor(R.color.darkGray));
+            fragmentTransaction.replace(R.id.fragment_container, fragment);
+            fragmentTransaction.addToBackStack(null);
+            fragmentTransaction.commit();
+            return true;
+        } else {
+            return false;
         }
     }
 }

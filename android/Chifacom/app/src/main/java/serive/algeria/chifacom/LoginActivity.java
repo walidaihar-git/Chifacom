@@ -12,10 +12,13 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class LoginActivity extends AppCompatActivity {
+import serive.algeria.chifacom.forgetPass.ForgetPassActivity;
+
+public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
     private  long backPressedTime;
-    AppCompatButton register ;
+    AppCompatButton register ,forgetPass;
     EditText email,password;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,14 +30,10 @@ public class LoginActivity extends AppCompatActivity {
         password=findViewById(R.id.password);
 
         register = findViewById(R.id.registerNav);
+        forgetPass = findViewById(R.id.forgetPass);
 
-        register.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
-                startActivity(intent);
-            }
-        });
+        register.setOnClickListener(this);
+        forgetPass.setOnClickListener(this);
     }
     private TextView.OnEditorActionListener actionListener = new TextView.OnEditorActionListener() {
         @Override
@@ -54,5 +53,19 @@ public class LoginActivity extends AppCompatActivity {
 
     public void login(View view) {
         startActivity(new Intent(this.getApplicationContext(), MapsActivity.class));
+    }
+
+    @Override
+    public void onClick(View v) {
+
+        if (v==register) {
+            Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+            startActivity(intent);
+
+        }
+        if (v == forgetPass){
+            Intent intent = new Intent(LoginActivity.this, ForgetPassActivity.class);
+            startActivity(intent);
+        }
     }
 }

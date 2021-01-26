@@ -45,6 +45,13 @@
                 android:layout_weight="0.2"
                 android:layout_marginHorizontal="@dimen/_10sdp"
                 android:background="@android:color/darker_gray"/>
+            <View
+                android:id="@+id/step5"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_10sdp"
+                android:layout_weight="0.2"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:background="@android:color/darker_gray"/>
         </LinearLayout>
     </RelativeLayout>
     <FrameLayout

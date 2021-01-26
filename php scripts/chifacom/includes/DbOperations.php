@@ -31,8 +31,8 @@
 			}
 			//doctor : step2 ---> full registration
 			function doctorRegister($firstname,$lastname,$address,$speciality,$birthdate,$office_id){
-				 $stmt  = $this->con->prepare("insert into doctor (doctor_firstname,doctor_lastname,doctor_address,doctor_speciality,birthdate,office_id) values (?,?,?,?,?,?)");
-				  $stmt->bind_param("ssssss",$firstname,$lastname,$address,$speciality,$birthdate,$office_id);
+				 $stmt  = $this->con->prepare("insert into doctor (doctor_firstname,doctor_lastname,doctor_speciality,birthdate,doctor_address,office_id) values (?,?,?,?,?,?)");
+				  $stmt->bind_param("ssssss",$firstname,$lastname,$speciality,$birthdate,$address,$office_id);
 				  if($stmt->execute()){
 				   return true ;
 			   }else{
@@ -90,6 +90,28 @@
 				
 			}
 			
+			// for address
+					function doctorRegisterAddress($province,$state,$link,$lat,$long){
+				//$password = md5($pass);
+				  $stmt  = $this->con->prepare("insert into address (province,state,address_link,address_lat,address_long) values (?,?,?,?,?)");
+				  $stmt->bind_param("sssss",$province,$state,$link,$lat,$long);
+				  if($stmt->execute()){
+				   return true ;
+			   }else{
+				   return false ;
+			   }
+			}
+			
+				public function getUserByAddress($link){
+				
+				$stmt = $this->con->prepare("select * from address 
+				                              where address_link = ? ");
+				$stmt-> bind_param("s",$link);
+				$stmt->execute();
+				return $stmt->get_result()->fetch_assoc();
+				
+			
+			}
 			
 			
 	 }

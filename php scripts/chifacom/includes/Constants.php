@@ -5,3 +5,4 @@
  define('DB_PASSWORD','');
  define('DB_HOST','localhost');
  
+ //define('GOOGLE_API_KEY','AIzaSyB2owjZwGBUjaRE74WoJiDjYdA2ikbcLr0');

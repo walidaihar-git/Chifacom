@@ -1,5 +1,6 @@
 package serive.algeria.chifacom.register;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -20,7 +21,7 @@ import serive.algeria.chifacom.RegisterActivity;
 
 public class FirstStepFragment extends Fragment implements View.OnClickListener, IonBackPressed {
 
-    AppCompatButton doctorNav,cabinetNav,clinicNav;
+    AppCompatButton doctorNav,cabinetNav;
 
 
     @Override
@@ -38,16 +39,13 @@ public class FirstStepFragment extends Fragment implements View.OnClickListener,
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-
         View view = inflater.inflate(R.layout.fragment_first_step, container, false);
 
         doctorNav = view.findViewById(R.id.doctorNav);
         cabinetNav = view.findViewById(R.id.cabinetNav);
-        clinicNav = view.findViewById(R.id.clinicNav);
 
         doctorNav.setOnClickListener(this);
         cabinetNav.setOnClickListener(this);
-        clinicNav.setOnClickListener(this);
 
 
         return view;
@@ -59,10 +57,12 @@ public class FirstStepFragment extends Fragment implements View.OnClickListener,
         if (v==doctorNav){
             // replace the choice fragment by Doctor fragment
             // here you can send other parameters for user permissions
+
             Fragment fragment = new SecondStepFragment();
             FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.setCustomAnimations(R.anim.slide_in_right,R.anim.slide_out_left);
+            getActivity().findViewById(R.id.step2).setBackgroundColor(getResources().getColor(R.color.blueBack));
             fragmentTransaction.replace(R.id.fragment_container, fragment);
             fragmentTransaction.addToBackStack(null);
 
@@ -75,10 +75,7 @@ public class FirstStepFragment extends Fragment implements View.OnClickListener,
             // you can send other parameters related to Cabinet
 
         }
-        if (v==clinicNav){
 
-            // the same thing
-        }
     }
 
     @Override

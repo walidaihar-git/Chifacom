@@ -18,7 +18,7 @@
                 android:id="@+id/label"
                 android:layout_width="@dimen/_200sdp"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/_20sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
                 android:text="@string/informations_d_identit"
                 android:textColor="@color/blueBack"
                 android:textSize="@dimen/_25ssp"
@@ -27,19 +27,19 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_below="@id/label"
                 android:orientation="vertical"
                 android:gravity="center">
 
                 <TextView
                     android:id="@+id/labelscan"
-                    android:layout_width="@dimen/_240sdp"
+                    android:layout_width="@dimen/_320sdp"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/label"
+                    android:textAlignment="center"
                     android:text="@string/scannez_votre_carte_d_identit_biom_trique"
-                    android:textSize="@dimen/_22ssp"
-                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:textSize="@dimen/_12ssp"
+                    android:layout_marginVertical="@dimen/_10sdp"
                     android:fontFamily="@font/nexa_light"
                     />
                 <ImageButton

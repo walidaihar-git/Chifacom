@@ -66,20 +66,20 @@
             android:hint="@string/specialite"
             android:importantForAutofill="no"
             android:inputType="text"
+            android:fontFamily="@font/nexa_light"
             android:background="@drawable/bgsss"
             android:paddingHorizontal="@dimen/_8sdp"/>
 
-        <EditText
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/birthdate"
             android:layout_width="@dimen/_200sdp"
             android:layout_height="@dimen/_35sdp"
             android:layout_marginTop="@dimen/_25sdp"
             android:hint="@string/birth_date_place"
-            android:importantForAutofill="no"
-            android:inputType="date"
             android:fontFamily="@font/nexa_light"
-            android:background="@drawable/bgsss"
-            android:paddingHorizontal="@dimen/_8sdp"/>
+            android:textAlignment="textStart"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:background="@drawable/bgsss"/>
 
         <EditText
             android:id="@+id/phone"
@@ -89,6 +89,7 @@
             android:hint="@string/numero_de_telephone"
             android:importantForAutofill="no"
             android:inputType="phone"
+            android:fontFamily="@font/nexa_light"
             android:background="@drawable/bgsss"
             android:paddingHorizontal="@dimen/_8sdp"/>
 

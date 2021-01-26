@@ -32,7 +32,7 @@
                 android:id="@+id/doctorNav"
                 android:layout_width="@dimen/_160sdp"
                 android:layout_height="@dimen/_65sdp"
-                android:layout_margin="@dimen/_20sdp"
+                android:layout_margin="@dimen/_10sdp"
                 android:background="@drawable/bg_cstm_button"
                 android:text="@string/docteur"
                 android:textSize="@dimen/_22ssp" />
@@ -41,18 +41,9 @@
                 android:id="@+id/cabinetNav"
                 android:layout_width="@dimen/_160sdp"
                 android:layout_height="@dimen/_65sdp"
-                android:layout_margin="@dimen/_20sdp"
+                android:layout_margin="@dimen/_10sdp"
                 android:background="@drawable/bg_cstm_button"
                 android:text="@string/cabinet"
-                android:textSize="@dimen/_22ssp" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/clinicNav"
-                android:layout_width="@dimen/_160sdp"
-                android:layout_height="@dimen/_65sdp"
-                android:layout_margin="@dimen/_20sdp"
-                android:background="@drawable/bg_cstm_button"
-                android:text="@string/clinique"
                 android:textSize="@dimen/_22ssp" />
 
 

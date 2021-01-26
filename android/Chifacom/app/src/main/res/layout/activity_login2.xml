@@ -29,11 +29,10 @@
             android:id="@+id/pour"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/logo"
             android:fontFamily="@font/nexa_light"
             android:text="@string/pour_les_docteurs"
             android:textColor="@color/white"
-            android:textSize="@dimen/_18ssp" />
+            android:textSize="@dimen/_15ssp" />
     </LinearLayout>
 
     <TextView
@@ -144,7 +143,7 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="wrap_content"
-            android:layout_height="@dimen/_45sdp"
+            android:layout_height="@dimen/_35sdp"
             android:background="@drawable/bg_signin_btn"
             android:fontFamily="@font/nexa_light"
             android:paddingHorizontal="@dimen/_12sdp"
@@ -156,6 +155,7 @@
             android:onClick="login"/>
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/forgetPass"
             android:layout_width="wrap_content"
             android:layout_height="@dimen/_28sdp"
             android:background="@android:color/transparent"
