@@ -16,12 +16,18 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 	
 	if(
 	      isset($_POST['doctor_firstname']) and
+		  isset($_POST['doctor_firstname_AR']) and
 		  isset($_POST['doctor_lastname']) and
+		  isset($_POST['doctor_lastname_AR']) and
 		  isset($_POST['doctor_speciality']) and
 		  isset($_POST['birthdate']) and
+		  isset($_POST['birthplace']) and
 		  isset($_POST['phone']) and
 		  isset($_POST['office_mail']) and
+		  isset($_POST['office_username']) and
+		  isset($_POST['office_pass']) and
 		  isset($_POST['office_type']) and
+		  isset($_POST['office_location']) and
 		  isset($_POST['province']) and
 		  isset($_POST['state']) and
 		  isset($_POST['address_link']) and
@@ -33,6 +39,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 		
 		$db = new DbOperations();
 		if ($db->doctorRegisterAddress(
+		$_POST['office_location'],
 		       $_POST['province'],
 			    $_POST['state'],
 			   $_POST['address_link'],
@@ -50,9 +57,12 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 		$con = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD,DB_NAME) or
 		  die('Unable to connect to database');
 		
+		      $username= $_POST['office_username'];
 		      $email= $_POST['office_mail'];
 			  $type= $_POST['office_type'];
 			  $phone= $_POST['phone'];
+			  $pass = $_POST['pass'];
+			  $password = md5($pass);
 			  
 			  $fileinfo = pathinfo($_FILES['office_picture']['name']);
 		  
@@ -66,14 +76,17 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 			  
 			  move_uploaded_file($_FILES['office_picture']['tmp_name'],$file_path);
 			  
-			   $stmt  = $con->prepare("INSERT INTO doc_office (office_mail,office_type,phone,office_picture) 
-			                             VALUES ('$email',
+			   $stmt  = $con->prepare("INSERT INTO doc_office (office_username,office_mail,office_pass,office_type,phone,office_picture) 
+			                             VALUES ('$username',
+										         '$email',
+										         '$password',
 										         '$type',
 												 '$phone',
 												 '$file_url')");
 			   if($stmt->execute()){
 				   $response['error']= false ; 
 				   $response['office_picture'] = $file_url;
+				   $response['office_username'] = $username;
 				   $response['office_mail'] = $email;
 				   $response['office_type'] = $type;
 				   $response['phone'] = $phone;
@@ -83,10 +96,13 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 			$user = $db->getUserByUsername($_POST['office_mail']);
 			if ($db->doctorRegister(
 		       $_POST['doctor_firstname'],
+			   $_POST['doctor_firstname_AR'],
 			   $_POST['doctor_lastname'],
+			   $_POST['doctor_lastname_AR'],
 			    $addr['address_id'],
 			   $_POST['doctor_speciality'],
 			   $_POST['birthdate'],
+			   $_POST['birthplace'],
 			   $user['office_id']
 		)){
 			
@@ -111,14 +127,18 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 				   //kkkkkkkkkkkkkkk
 			$db = new DbOperations();
 		if ($db->doctorRegisterOffice(
+		        $_POST['office_username'],
 		       $_POST['office_mail'],
+			   $_POST['office_pass'],
 			   $_POST['office_type'],
 			   $_POST['phone']
 		)){
 			$user = $db->getUserByUsername($_POST['office_mail']);
 			if ($db->doctorRegister(
 		       $_POST['doctor_firstname'],
+			   $_POST['doctor_firstname_AR'],
 			   $_POST['doctor_lastname'],
+			   $_POST['doctor_lastname_AR'],
 			   $addr['address_id'],
 			   $_POST['doctor_speciality'],
 			   $_POST['birthdate'],
@@ -151,8 +171,10 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 		
 		
 	}else{
+		
 		$response['error'] = true ;	
 	    $response['message'] = "Required fields are missing" ;
+	
 	}
 	
 }else{

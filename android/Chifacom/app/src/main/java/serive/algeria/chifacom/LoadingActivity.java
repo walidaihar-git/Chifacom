@@ -2,16 +2,30 @@ package serive.algeria.chifacom;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ActionBar;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.View;
 
 public class LoadingActivity extends AppCompatActivity {
-
+View decorView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_loading);
+
+        decorView = getWindow().getDecorView();
+        decorView.setOnSystemUiVisibilityChangeListener(new View.OnSystemUiVisibilityChangeListener() {
+            @Override
+            public void onSystemUiVisibilityChange(int visibility) {
+                decorView.setSystemUiVisibility(hideSystemBars());
+            }
+        });
+
+
+
+
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -31,5 +45,25 @@ public class LoadingActivity extends AppCompatActivity {
                 finish();
             }
         },3000);
+    }
+
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+        super.onWindowFocusChanged(hasFocus);
+        if (hasFocus){
+            decorView.setSystemUiVisibility(hideSystemBars());
+        }
+    }
+
+    public int  hideSystemBars(){
+
+
+        return View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                |View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+                |View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                |View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                |View.SYSTEM_UI_FLAG_FULLSCREEN
+                |View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                ;
     }
 }

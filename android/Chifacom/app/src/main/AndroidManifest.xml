@@ -16,7 +16,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Chifacom">
-        <activity android:name=".forgetPass.PasswordRecoverActivity"></activity>
+        <activity android:name=".doctor.CreateRoomActivity"></activity>
+        <activity android:name=".doctor.DoctorProfileActivity" />
+        <activity android:name=".doctor.DoctorHomeActivity" />
+        <activity android:name=".forgetPass.PasswordRecoverActivity" />
         <activity android:name=".forgetPass.ForgetPassActivity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.

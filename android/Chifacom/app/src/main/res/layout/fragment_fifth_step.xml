@@ -1,69 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".register.FifthStepFragment"
-   >
+    tools:context=".register.FifthStepFragment">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/mapFragment"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:id="@+id/label"
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_40sdp"
+                android:text="@string/adresse_et_localisation"
+                android:textColor="@color/blueBack"
+                android:textSize="@dimen/_25ssp"
+                android:layout_margin="@dimen/_20sdp"
+                android:fontFamily="@font/nexa_light"
+                />
+
+            <LinearLayout
+                android:id="@+id/prov_state"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/state"
+                    android:layout_width="@dimen/_120sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:hint="@string/province"
+                    android:textSize="@dimen/_12ssp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:fontFamily="@font/nexa_light"
+                    android:background="@drawable/bgsss"
+                    android:paddingHorizontal="@dimen/_8sdp"
+                    android:drawableEnd="@drawable/ic_baseline_arrow_drop_down_24"
+                    />
+                <EditText
+                    android:id="@+id/province"
+                    android:layout_width="@dimen/_120sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:hint="@string/state"
+                    android:textSize="@dimen/_12ssp"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:fontFamily="@font/nexa_light"
+                    android:background="@drawable/bgsss"
+                    android:paddingHorizontal="@dimen/_8sdp"
+                    android:drawableEnd="@drawable/ic_baseline_arrow_drop_down_24"
+                    />
+
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/address"
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:hint="@string/ecriver_votre_adresse"
+                android:textSize="@dimen/_12ssp"
+                android:importantForAutofill="no"
+                android:layout_marginVertical="@dimen/_20sdp"
+                android:inputType="text"
+                android:fontFamily="@font/nexa_light"
+                android:background="@drawable/bgsss"
+                android:paddingHorizontal="@dimen/_8sdp"
+                />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/nextStep5"
+                android:layout_width="@dimen/_130sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:background="@drawable/custom_background_transparent"
+                android:text="@string/suivant"
+                android:fontFamily="@font/nexabold"
+                android:textColor="@color/blue"
+                android:layout_marginTop="@dimen/_5sdp"
+                />
+
+
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/mapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_160sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:background="@color/blueBack"
+            android:gravity="center"
+            android:text="MAP" />
 
         <TextView
-            android:id="@+id/label1"
-            android:layout_width="@dimen/_200sdp"
-            android:layout_height="wrap_content"
-            android:text="@string/bienvenu_dr"
-            android:textColor="@color/blueBack"
-            android:textSize="@dimen/_25ssp"
-            android:layout_marginTop="@dimen/_130sdp"
-            android:layout_centerHorizontal="true"
-            android:fontFamily="@font/nexa_light"
+            android:id="@+id/back"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_margin="@dimen/_10sdp"
+            android:background="@drawable/ic_baseline_arrow_left_24"
             />
-    <TextView
-        android:id="@+id/doctorfull"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/label1"
-        android:layout_centerHorizontal="true"
 
-        android:text="@string/doctor_fullname"
-        />
-
-       <ImageView
-           android:id="@+id/docImg"
-           android:layout_width="@dimen/_150sdp"
-           android:layout_height="@dimen/_150sdp"
-           android:layout_below="@id/doctorfull"
-           android:layout_centerHorizontal="true"
-           android:background="@drawable/custom_button2"
-           />
-
-       <androidx.appcompat.widget.AppCompatButton
-           android:layout_width="wrap_content"
-           android:layout_height="@dimen/_40sdp"
-           android:background="@drawable/bg_signin_btn"
-           android:layout_below="@id/docImg"
-           android:text="@string/t_l_chargez_votre_photo"
-           android:textColor="@color/white"
-           android:padding="@dimen/_10sdp"
-           android:layout_centerHorizontal="true"
-           android:layout_marginVertical="@dimen/_10sdp"
-           android:textSize="@dimen/_10sdp"
-           />
+    </RelativeLayout>
 
 
-
-
-
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/submitRegistration"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_55sdp"
-        android:layout_alignParentBottom="true"
-        android:background="@drawable/submit_button"
-        android:text="@string/soumettre"
-        android:textColor="@color/white"
-        android:textSize="@dimen/_17ssp"
-
-        />
-</RelativeLayout>
+</FrameLayout>

@@ -142,6 +142,7 @@
             android:layout_weight="0.2"/>
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/login"
             android:layout_width="wrap_content"
             android:layout_height="@dimen/_35sdp"
             android:background="@drawable/bg_signin_btn"
