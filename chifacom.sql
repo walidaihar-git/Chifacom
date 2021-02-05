@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 04, 2021 at 04:52 PM
+-- Generation Time: Feb 02, 2021 at 03:11 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.3.18
 
@@ -42,7 +42,9 @@ CREATE TABLE `address` (
 --
 
 INSERT INTO `address` (`address_id`, `office_location`, `province`, `state`, `address_link`, `address_lat`, `address_long`) VALUES
-(11, 'cite djenaine', 'sidi merouane', 'mila', 'https://www.google.com/maps/place/Constantine+Province/@36.5227989,6.262338,497m/data=!3m1!1e3!4m5!3m4!1s0x12f10cb470246509:0x5e2ae1969309f737!8m2!3d36.3373911!4d6.663812', 36.52306169788467, 6.26314185637305);
+(6, '', 'sidi merouane ', 'milanooooo', 'lfkgjgj.com/map/mila/algeria', 45.9, 98.08),
+(7, 'dejenaine', 'sidi merouane ', 'milanooooo', 'lfkgjgj.com/map/mila/algeria', 45.9, 98.08),
+(8, 'dejenaine', 'sidi merouane ', 'milanooooo', 'lfkgjgj.com/map/mila/algeria', 45.9, 98.08);
 
 -- --------------------------------------------------------
 
@@ -174,7 +176,7 @@ CREATE TABLE `doctor` (
 --
 
 INSERT INTO `doctor` (`doctor_id`, `doctor_firstname`, `doctor_firstname_AR`, `doctor_lastname`, `doctor_lastname_AR`, `doctor_speciality`, `birthdate`, `birthplace`, `doctor_address`, `office_id`) VALUES
-(21, 'j', 'h', 'hj', 'm', 'dh', '0000-00-00', '', 11, 28);
+(18, 'Yahia', 'ffkfkk', 'Bilal', 'بلالjffjfjfjfj', 'system informarion', '1993-04-20', '', 6, 23);
 
 -- --------------------------------------------------------
 
@@ -199,7 +201,9 @@ CREATE TABLE `doc_office` (
 --
 
 INSERT INTO `doc_office` (`office_id`, `office_username`, `office_mail`, `office_pass`, `office_type`, `phone`, `office_picture`, `isActive`, `office_createdAt`) VALUES
-(28, '666', 'bil@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055', 'doctor', 66, '', 0, '2021-02-04 15:50:44');
+(23, 'bilalyahia', 'bilal.yahia1994@gmail.com', '123', 'docteurrrrrrrrrrrrrrrrrr', 699779080, '', 1, '2021-01-27 22:34:36'),
+(24, '', 'bilal.yahia1994@gmail.com', '', 'docteurrrrrrrrrrrrrrrrrr', 699779080, '', 0, '2021-02-02 14:02:03'),
+(25, '', 'bilal.yahia1994@gmail.com', '', 'docteurrrrrrrrrrrrrrrrrr', 699779080, '', 0, '2021-02-02 14:02:46');
 
 -- --------------------------------------------------------
 
@@ -342,7 +346,7 @@ ALTER TABLE `vocation`
 -- AUTO_INCREMENT for table `address`
 --
 ALTER TABLE `address`
-  MODIFY `address_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `address_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `appointement`
@@ -378,13 +382,13 @@ ALTER TABLE `clinic_doctor`
 -- AUTO_INCREMENT for table `doctor`
 --
 ALTER TABLE `doctor`
-  MODIFY `doctor_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `doctor_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `doc_office`
 --
 ALTER TABLE `doc_office`
-  MODIFY `office_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `office_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT for table `time_of_work`

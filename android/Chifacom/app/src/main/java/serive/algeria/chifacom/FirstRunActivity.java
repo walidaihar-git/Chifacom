@@ -2,8 +2,10 @@ package serive.algeria.chifacom;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
+import androidx.core.content.ContextCompat;
 
 import android.app.ActionBar;
+import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -71,5 +73,17 @@ public class FirstRunActivity extends AppCompatActivity {
                 |View.SYSTEM_UI_FLAG_FULLSCREEN
                 |View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
                 ;
+    }
+
+    public void setFr(View view) {
+        findViewById(R.id.Fr).setBackgroundTintList(ContextCompat.getColorStateList(this, R.color.colorPrimary));
+        findViewById(R.id.Ar).setBackgroundTintList(ContextCompat.getColorStateList(this, R.color.inselect));
+
+    }
+
+    public void setAr(View view) {
+        findViewById(R.id.Ar).setBackgroundTintList(ContextCompat.getColorStateList(this, R.color.colorPrimary));
+        findViewById(R.id.Fr).setBackgroundTintList(ContextCompat.getColorStateList(this, R.color.inselect));
+
     }
 }

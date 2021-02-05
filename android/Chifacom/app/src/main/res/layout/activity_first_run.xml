@@ -14,6 +14,7 @@
         >
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/Fr"
             android:layout_width="@dimen/_70sdp"
             android:layout_height="@dimen/_70sdp"
             android:background="@drawable/language_1"
@@ -21,19 +22,20 @@
             android:fontFamily="@font/nexabold"
             android:textColor="@color/white"
             android:backgroundTint="#338DC9"
-
+            android:onClick="setFr"
             />
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/Ar"
             android:layout_width="@dimen/_70sdp"
             android:layout_height="@dimen/_70sdp"
             android:background="@drawable/language_1"
             android:text="ar"
             android:fontFamily="@font/nexabold"
-            android:textColor="#cecece"
+            android:textColor="@android:color/white"
             android:backgroundTint="#e5e5e5"
             android:layout_marginHorizontal="@dimen/_10sdp"
-            />
+            android:onClick="setAr"/>
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/submitLang"
             android:layout_width="@dimen/_70sdp"

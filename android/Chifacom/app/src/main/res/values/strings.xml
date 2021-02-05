@@ -80,4 +80,6 @@
     <string name="nom_d_utilisateur">Nom d\'utilisateur</string>
     <string name="mot_de_passe">Mot de passe</string>
     <string name="attendez">attendez s\'il vous plais</string>
+    <string name="title_activity_mark_address_maps" translatable="false">Map</string>
+
 </resources>

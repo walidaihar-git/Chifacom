@@ -16,13 +16,16 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 	
 	if(
 	      isset($_POST['doctor_firstname']) and
+		  isset($_POST['doctor_firstname_AR']) and
 		  isset($_POST['doctor_lastname']) and
+		  isset($_POST['doctor_lastname_AR']) and
 		  isset($_POST['doctor_speciality']) and
 		  isset($_POST['birthdate']) and
 		  isset($_POST['birthplace']) and
 		  isset($_POST['phone']) and
 		  isset($_POST['office_mail']) and
 		  isset($_POST['office_type']) and
+		  isset($_POST['office_location']) and
 		  isset($_POST['province']) and
 		  isset($_POST['state']) and
 		  isset($_POST['address_link']) and
@@ -34,6 +37,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 		
 		$db = new DbOperations();
 		if ($db->doctorRegisterAddress(
+		$_POST['office_location'],
 		       $_POST['province'],
 			    $_POST['state'],
 			   $_POST['address_link'],
@@ -84,7 +88,9 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 			$user = $db->getUserByUsername($_POST['office_mail']);
 			if ($db->doctorRegister(
 		       $_POST['doctor_firstname'],
+			   $_POST['doctor_firstname_AR'],
 			   $_POST['doctor_lastname'],
+			   $_POST['doctor_lastname_AR'],
 			    $addr['address_id'],
 			   $_POST['doctor_speciality'],
 			   $_POST['birthdate'],
@@ -120,7 +126,9 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 			$user = $db->getUserByUsername($_POST['office_mail']);
 			if ($db->doctorRegister(
 		       $_POST['doctor_firstname'],
+			   $_POST['doctor_firstname_AR'],
 			   $_POST['doctor_lastname'],
+			   $_POST['doctor_lastname_AR'],
 			   $addr['address_id'],
 			   $_POST['doctor_speciality'],
 			   $_POST['birthdate'],
@@ -153,8 +161,30 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 		
 		
 	}else{
+		$db = new DbOperations();
+		$user = $db->getUserByUsername($_POST['office_mail']);
+		$doctor = $db -> getDoctorByUsername($user['office_id']);
+		$address = $db -> getAddressByUsername($doctor['doctor_address']);
+		
 		$response['error'] = true ;	
 	    $response['message'] = "Required fields are missing" ;
+			$response['office_mail'] =  $_POST['office_mail'];
+			$response['office_type'] =  $_POST['office_type'];
+			$response['phone'] =  $_POST['phone'];
+			$response['doctor_firstname'] =  $_POST['doctor_firstname'];
+			$response['doctor_firstname_AR'] =  $_POST['doctor_firstname_AR'];
+			$response['doctor_lastname'] =  $_POST['doctor_lastname'];
+			$response['doctor_lastname_AR'] =  $_POST['doctor_lastname_AR'];
+		    //$response['doctor_address'] = $doctor['doctor_address'];
+			$response['doctor_speciality'] =  $_POST['doctor_speciality'];
+			$response['birthdate'] =  $_POST['birthdate'];
+			$response['birthplace'] =  $_POST['birthplace'];
+			$response['office_location'] =  $_POST['office_location'];
+			$response['province'] =  $_POST['province'];
+			$response['state'] =  $_POST['state'];
+			$response['address_link'] =  $_POST['address_link'];
+			$response['address_lat'] =  $_POST['address_lat'];
+			$response['address_long'] =  $_POST['address_long'];
 	}
 	
 }else{

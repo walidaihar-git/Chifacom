@@ -7,29 +7,27 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:id="@+id/container"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_above="@+id/mapFragment"
-            android:orientation="vertical"
+            android:layout_above="@+id/fragment_container"
             android:gravity="center"
-            >
+            android:orientation="vertical"
+            android:visibility="visible">
 
             <TextView
                 android:id="@+id/label"
                 android:layout_width="@dimen/_150sdp"
                 android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_20sdp"
                 android:layout_marginEnd="@dimen/_40sdp"
+                android:fontFamily="@font/nexa_light"
                 android:text="@string/adresse_et_localisation"
                 android:textColor="@color/blueBack"
-                android:textSize="@dimen/_25ssp"
-                android:layout_margin="@dimen/_20sdp"
-                android:fontFamily="@font/nexa_light"
-                />
+                android:textSize="@dimen/_25ssp" />
 
             <LinearLayout
                 android:id="@+id/prov_state"
@@ -39,33 +37,36 @@
 
                 android:orientation="horizontal">
 
-                <EditText
+                <TextView
                     android:id="@+id/state"
                     android:layout_width="@dimen/_120sdp"
                     android:layout_height="@dimen/_35sdp"
-                    android:hint="@string/province"
-                    android:textSize="@dimen/_12ssp"
                     android:layout_marginEnd="@dimen/_10sdp"
+                    android:background="@drawable/bgsss"
+                    android:drawableEnd="@drawable/ic_baseline_arrow_drop_down_24"
+                    android:fontFamily="@font/nexa_light"
+                    android:gravity="center"
                     android:importantForAutofill="no"
                     android:inputType="text"
-                    android:fontFamily="@font/nexa_light"
-                    android:background="@drawable/bgsss"
                     android:paddingHorizontal="@dimen/_8sdp"
-                    android:drawableEnd="@drawable/ic_baseline_arrow_drop_down_24"
-                    />
-                <EditText
+                    android:text="@string/province"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_12ssp" />
+
+                <TextView
                     android:id="@+id/province"
                     android:layout_width="@dimen/_120sdp"
                     android:layout_height="@dimen/_35sdp"
-                    android:hint="@string/state"
-                    android:textSize="@dimen/_12ssp"
+                    android:background="@drawable/bgsss"
+                    android:drawableEnd="@drawable/ic_baseline_arrow_drop_down_24"
+                    android:fontFamily="@font/nexa_light"
+                    android:gravity="center"
                     android:importantForAutofill="no"
                     android:inputType="text"
-                    android:fontFamily="@font/nexa_light"
-                    android:background="@drawable/bgsss"
                     android:paddingHorizontal="@dimen/_8sdp"
-                    android:drawableEnd="@drawable/ic_baseline_arrow_drop_down_24"
-                    />
+                    android:text="@string/state"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_12ssp" />
 
 
             </LinearLayout>
@@ -74,49 +75,52 @@
                 android:id="@+id/address"
                 android:layout_width="@dimen/_200sdp"
                 android:layout_height="@dimen/_35sdp"
-                android:hint="@string/ecriver_votre_adresse"
-                android:textSize="@dimen/_12ssp"
-                android:importantForAutofill="no"
                 android:layout_marginVertical="@dimen/_20sdp"
-                android:inputType="text"
-                android:fontFamily="@font/nexa_light"
                 android:background="@drawable/bgsss"
+                android:fontFamily="@font/nexa_light"
+                android:hint="@string/ecriver_votre_adresse"
+                android:importantForAutofill="no"
+                android:inputType="text"
                 android:paddingHorizontal="@dimen/_8sdp"
-                />
+                android:textSize="@dimen/_12ssp" />
 
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/nextStep5"
                 android:layout_width="@dimen/_130sdp"
                 android:layout_height="@dimen/_40sdp"
-                android:background="@drawable/custom_background_transparent"
-                android:text="@string/suivant"
-                android:fontFamily="@font/nexabold"
-                android:textColor="@color/blue"
                 android:layout_marginTop="@dimen/_5sdp"
-                />
-
+                android:background="@drawable/custom_background_transparent"
+                android:fontFamily="@font/nexabold"
+                android:text="@string/suivant"
+                android:textColor="@color/blue" />
 
 
         </LinearLayout>
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/mapFragment"
+        <FrameLayout
+            android:id="@+id/fragment_container"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_160sdp"
             android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:background="@color/blueBack"
-            android:gravity="center"
-            android:text="MAP" />
+            android:layout_alignParentBottom="true">
+
+            <fragment
+                android:id="@+id/mapFragment"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_4sdp"
+                android:background="@color/blueBack"
+                android:gravity="center" />
+        </FrameLayout>
 
         <TextView
             android:id="@+id/back"
             android:layout_width="@dimen/_70sdp"
             android:layout_height="@dimen/_50sdp"
             android:layout_margin="@dimen/_10sdp"
-            android:background="@drawable/ic_baseline_arrow_left_24"
-            />
+            android:background="@drawable/ic_baseline_arrow_left_24" />
 
     </RelativeLayout>
 

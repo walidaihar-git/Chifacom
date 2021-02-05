@@ -25,7 +25,7 @@ import android.widget.TextView;
 import java.util.Calendar;
 
 import serive.algeria.chifacom.IonBackPressed;
-import serive.algeria.chifacom.MapsActivity;
+
 import serive.algeria.chifacom.R;
 
 

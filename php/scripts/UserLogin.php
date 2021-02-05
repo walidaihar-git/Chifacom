@@ -22,11 +22,14 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 			$response['phone'] = $user['phone'];
 			$response['office_createdAt'] = $user['office_createdAt'];
 			$response['doctor_firstname'] = $doctor['doctor_firstname'];
+			$response['doctor_firstname_AR'] = $doctor['doctor_firstname_AR'];
 			$response['doctor_lastname'] = $doctor['doctor_lastname'];
+			$response['doctor_lastname_AR'] = $doctor['doctor_lastname_AR'];
 		    //$response['doctor_address'] = $doctor['doctor_address'];
 			$response['doctor_speciality'] = $doctor['doctor_speciality'];
 			$response['birthdate'] = $doctor['birthdate'];
 			$response['birthplace'] = $doctor['birthplace'];
+			$response['office_location'] = $address['office_location'];
 			$response['province'] = $address['province'];
 			$response['state'] = $address['state'];
 			$response['address_link'] = $address['address_link'];

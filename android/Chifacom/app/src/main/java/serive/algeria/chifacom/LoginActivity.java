@@ -14,6 +14,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import serive.algeria.chifacom.doctor.DoctorHomeActivity;
+import serive.algeria.chifacom.doctor.DoctorMainActivity;
 import serive.algeria.chifacom.forgetPass.ForgetPassActivity;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
@@ -66,9 +67,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         System.exit(0);
     }
 
-    public void login(View view) {
-        startActivity(new Intent(this.getApplicationContext(), MapsActivity.class));
-    }
+
 
     @Override
     public void onClick(View v) {
@@ -83,7 +82,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             startActivity(intent);
         }
         if (v==login){
-            Intent intent = new Intent(LoginActivity.this, DoctorHomeActivity.class);
+            Intent intent = new Intent(LoginActivity.this, DoctorMainActivity.class);
             startActivity(intent);
         }
     }
@@ -97,7 +96,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     }
 
     public int  hideSystemBars(){
-
 
         return View.SYSTEM_UI_FLAG_LAYOUT_STABLE
                 |View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
