@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Chifacom</string>
+    <string name="nouveau_membre_s_inscrire">عضو جديد ؟ سجل هنا</string>
+    <string name="bienvenu_en_chifacom_app">مرحبا بكم في تطبيق Chifacom</string>
+    <string name="choisir_votre_language">اختر لغتك</string>
+    <string name="soumettre">تأكيد</string>
+    <string name="pour_les_docteurs">للأطباء</string>
+    <string name="s_identifier">تسجيل الدخول</string>
+    <string name="votre_email_ici">بريدك الالكتروني هنا</string>
+    <string name="votre_mot_de_passe_ici">رمزك السري هنا</string>
+    <string name="je_suis_un_une">أنا ...</string>
+    <string name="docteur">طبيب</string>
+    <string name="cabinet">عيادة</string>
+    <string name="clinique">قاعة علاج</string>
+    <string name="personal_informations">المعلومات الشخصية</string>
+    <string name="nom">اللقب</string>
+    <string name="prenom">الاسم</string>
+    <string name="specialite">التخصص</string>
+    <string name="birth_date_place">تاريخ و مكان الازدياد</string>
+    <string name="email_electronique">البريد الالكتروني</string>
+    <string name="numero_de_telephone">رقم الهانف</string>
+    <string name="suivant">التالي</string>
+    <string name="adresse_et_localisation">العنوان و الموقع</string>
+    <string name="ecriver_votre_adresse">اكتب عنوانك</string>
+    <string name="se_situer_sur_google_maps">حدد موقعك على الخريطة</string>
+    <string name="informations_d_identit">معلومات الهوية</string>
+    <string name="scannez_votre_carte_d_identit_biom_trique">مسح بطاقة الهوية الخاصة بك</string>
+    <string name="cliquez_à_nouveau_pour_quitter">اضغط مرة اخرى للخروج</string>
+    <string name="signin">تسجيل الدخول</string>
+    <string name="forgetPassword">نسيت كلمة المرور؟</string>
+    <string name="title_activity_maps">عنوان الخريطة</string>
+    <string name="hello_blank_fragment">...</string>
+    <string name="bienvenu_dr">مرحبا دكتور</string>
+    <string name="t_l_chargez_votre_photo">تحميل الصورة</string>
+    <string name="doctor_fullname">...</string>
+</resources>

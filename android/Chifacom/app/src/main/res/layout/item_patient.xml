@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    >
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:gravity="center_vertical">
+    <TextView
+        android:id="@+id/index"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/circle_white"
+        android:layout_marginEnd="@dimen/_6sdp"
+        android:layout_marginVertical="@dimen/_10sdp"
+        android:textColor="@android:color/black"
+        android:padding="@dimen/_6sdp"/>
+
+    <TextView
+        android:id="@+id/patient_fullName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:text="fullName"
+        android:textSize="@dimen/_12ssp"
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toEndOf="@id/index"
+        app:layout_constraintTop_toTopOf="parent"
+        android:fontFamily="@font/nexabold"/>
+    <ImageButton
+        android:id="@+id/menuPatient"
+        android:layout_width="@dimen/_35sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:background="@drawable/menupatient"
+        android:scaleType="centerInside"
+        android:layout_gravity="center_vertical"
+        android:visibility="gone"/>
+</LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/show_card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="show information"
+        android:textColor="@android:color/white"
+        android:fontFamily="@font/nexabold"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textAllCaps="false"
+        android:background="@android:color/transparent"
+        android:layout_gravity="end"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
