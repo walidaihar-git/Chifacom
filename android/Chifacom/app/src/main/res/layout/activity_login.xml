@@ -5,13 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/blueBack"
-    tools:context=".LoginActivity">
+    >
 
     <ImageView
         android:id="@+id/logo"
         android:layout_width="@dimen/_200sdp"
         android:layout_height="wrap_content"
-        android:src="@drawable/chifacomlogo"
+        android:src="@drawable/chifacom_logo1"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="@dimen/_50sdp"
         />
@@ -51,7 +51,7 @@
         />
 
     <EditText
-        android:id="@+id/email"
+        android:id="@+id/email2"
         android:layout_width="@dimen/_200sdp"
         android:layout_height="wrap_content"
         android:hint="@string/votre_email_ici"
@@ -62,12 +62,12 @@
 
         />
     <EditText
-        android:id="@+id/password"
+        android:id="@+id/password2"
         android:layout_width="@dimen/_200sdp"
         android:layout_height="wrap_content"
         android:hint="@string/votre_mot_de_passe_ici"
         android:textColorHint="@color/cloud"
-        android:layout_below="@id/email"
+        android:layout_below="@id/email2"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="@dimen/_25sdp"
 

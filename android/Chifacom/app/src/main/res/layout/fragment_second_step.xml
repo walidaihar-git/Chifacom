@@ -5,96 +5,99 @@
     android:layout_height="match_parent"
     tools:context=".register.SecondStepFragment">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/step2"
-        android:layout_marginTop="@dimen/_12sdp"
-        />
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
 
-    <RelativeLayout
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true">
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_100sdp"
-        >
+        android:gravity="center"
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical">
+
         <TextView
             android:id="@+id/label"
             android:layout_width="@dimen/_200sdp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginStart="@dimen/_20sdp"
             android:text="@string/personal_informations"
-            android:layout_marginStart="@dimen/_40sdp"
-            android:textSize="@dimen/_25ssp"
             android:textColor="@color/blueBack"
+            android:textSize="@dimen/_22ssp"
+            android:fontFamily="@font/nexa_light"
             />
 
         <EditText
             android:id="@+id/fname"
             android:layout_width="@dimen/_200sdp"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginTop="@dimen/_15sdp"
             android:hint="@string/nom"
-            android:layout_below="@id/label"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="@dimen/_25sdp"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            android:fontFamily="@font/nexa_light"
+            android:background="@drawable/bgsss"
+            android:paddingHorizontal="@dimen/_8sdp"
             />
+        <EditText
+            android:id="@+id/fnameAR"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:hint="اللقب"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            android:fontFamily="@font/nexa_light"
+            android:background="@drawable/bgsss"
+            android:paddingHorizontal="@dimen/_8sdp"
+            />
+
         <EditText
             android:id="@+id/lname"
             android:layout_width="@dimen/_200sdp"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginTop="@dimen/_25sdp"
             android:hint="@string/prenom"
-            android:layout_below="@id/fname"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="@dimen/_25sdp"
-            />
-        <EditText
-            android:id="@+id/speciality"
-            android:layout_width="@dimen/_200sdp"
-            android:layout_height="wrap_content"
-            android:hint="@string/specialite"
-            android:layout_below="@id/lname"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="@dimen/_25sdp"
-            />
-        <EditText
-            android:id="@+id/birthdate"
-            android:layout_width="@dimen/_200sdp"
-            android:layout_height="wrap_content"
-            android:hint="@string/birth_date_place"
-            android:layout_below="@id/speciality"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="@dimen/_25sdp"
-            />
-        <EditText
-            android:id="@+id/phone"
-            android:layout_width="@dimen/_200sdp"
-            android:layout_height="wrap_content"
-            android:hint="@string/numero_de_telephone"
-            android:layout_below="@id/birthdate"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="@dimen/_25sdp"
-            />
-        <EditText
-            android:id="@+id/emailE"
-            android:layout_width="@dimen/_200sdp"
-            android:layout_height="wrap_content"
-            android:hint="@string/email_electronique"
-            android:layout_below="@id/phone"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="@dimen/_25sdp"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            android:fontFamily="@font/nexa_light"
+            android:background="@drawable/bgsss"
+            android:paddingHorizontal="@dimen/_8sdp"
             />
 
-
+        <EditText
+            android:id="@+id/lnameAR"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:hint="الاسم"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            android:fontFamily="@font/nexa_light"
+            android:background="@drawable/bgsss"
+            android:paddingHorizontal="@dimen/_8sdp"
+            />
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/nextStep"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/nextStep2"
+            android:layout_width="@dimen/_130sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@drawable/custom_background_transparent"
             android:text="@string/suivant"
-            android:drawableEnd="@drawable/ic_baseline_navigate_next_24"
-            android:background="@color/white"
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="@dimen/_10sdp"
+            android:fontFamily="@font/nexabold"
+            android:textColor="@color/blue"
+            android:layout_marginTop="@dimen/_25sdp"
             />
 
-    </RelativeLayout>
 
+    </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>
 
 </FrameLayout>
