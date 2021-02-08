@@ -11,8 +11,13 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.text.SpannableString;
+import android.text.style.TextAppearanceSpan;
+import android.view.MenuItem;
 import android.view.View;
 
+import com.google.android.material.navigation.NavigationView;
+import com.google.android.material.resources.TextAppearance;
 import com.ismaeldivita.chipnavigation.ChipNavigationBar;
 
 import serive.algeria.chifacom.R;
@@ -22,13 +27,26 @@ public class DoctorMainActivity extends AppCompatActivity {
     private Fragment fragment = null ;
     View decorView;
 
+    NavigationView navigationView ; // added -------------------------------
+
     private DrawerLayout drawerLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_doctor_main);
+// added -------------------------------
+        navigationView = findViewById(R.id.nav_view);
 
+        MenuItem menuItem = navigationView.getMenu().findItem(R.id.compte);
+        MenuItem menuItem2 = navigationView.getMenu().findItem(R.id.paramaters);
+        SpannableString s = new SpannableString(menuItem.getTitle());
+        SpannableString s2 = new SpannableString(menuItem2.getTitle());
+        s.setSpan(new TextAppearanceSpan(this, R.style.TitleAppearance), 0, s.length(), 0);
+        s2.setSpan(new TextAppearanceSpan(this, R.style.TitleAppearance), 0, s2.length(), 0);
+        menuItem.setTitle(s);
+        menuItem2.setTitle(s2);
+// added  end -------------------------------
         //actionbar
         Toolbar toolbar = findViewById(R.id.toolbar);
 //        toolbar.setCollapseIcon(R.drawable.profile_icon_2);

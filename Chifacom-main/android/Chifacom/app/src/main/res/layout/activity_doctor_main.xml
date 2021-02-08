@@ -15,6 +15,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+
         <androidx.appcompat.widget.Toolbar
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
@@ -22,8 +23,10 @@
             android:id="@+id/toolbar"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:titleTextAppearance="@font/nexa_light"
 
             >
+
             <TextView
                 android:id="@+id/language"
                 android:layout_width="wrap_content"
@@ -44,7 +47,21 @@
             />
 
     </LinearLayout>
-
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/chipNavigationBarcnt"
+        android:layout_marginHorizontal="@dimen/_10sdp">
+        <com.ismaeldivita.chipnavigation.ChipNavigationBar
+            android:id="@+id/chipNavigationBar"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_alignParentBottom="true"
+            app:cnb_menuResource="@menu/nav_items"
+            android:background="@drawable/bg_nav"
+            android:paddingHorizontal="@dimen/_4sdp"
+            />
+    </RelativeLayout>
     <com.google.android.material.navigation.NavigationView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
@@ -53,23 +70,27 @@
         app:headerLayout="@layout/nav_header"
         app:menu="@menu/drawer_menu"
         app:itemTextColor="#80767676"
-        />
+        app:itemTextAppearance="@style/NexaTextViewStyle"
+        android:fitsSystemWindows="true"
+        >
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:src="@drawable/chifacom_logo2"
+                android:layout_alignParentBottom="true"
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/chipNavigationBarcnt"
-        android:layout_marginHorizontal="@dimen/_10sdp">
-    <com.ismaeldivita.chipnavigation.ChipNavigationBar
-        android:id="@+id/chipNavigationBar"
-        android:layout_width="wrap_content"
-        android:layout_height="@dimen/_40sdp"
-        android:layout_alignParentBottom="true"
-        app:cnb_menuResource="@menu/nav_items"
-        android:background="@drawable/bg_nav"
-        android:paddingHorizontal="@dimen/_4sdp"
-        />
-    </RelativeLayout>
+                />
+
+        </RelativeLayout>
+
+
+    </com.google.android.material.navigation.NavigationView>
+
+
 
 
 </androidx.drawerlayout.widget.DrawerLayout>

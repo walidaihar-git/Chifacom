@@ -8,4 +8,14 @@
         
     </style>
 
+
+
+        <style name="NexaTextViewStyle" parent="android:Widget.TextView">
+            <item name="android:fontFamily">@font/nexabold</item>
+        </style>
+
+    <style name="TitleAppearance">
+<!--        <item name="android:fontFamily">@font/nexabold</item>-->
+        <item name="android:textColor">@color/blue</item>
+    </style>
 </resources>

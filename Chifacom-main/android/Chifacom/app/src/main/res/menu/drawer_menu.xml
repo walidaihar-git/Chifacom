@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view"
     >
-    <item android:title="@string/compte" >
+    <item android:title="@string/compte" android:id="@+id/compte" >
         <menu>
             <item  android:id="@+id/notification"
                 android:title="@string/notification"/>
@@ -14,7 +14,7 @@
         </menu>
     </item>
 
-    <item android:title="@string/parametres" >
+    <item android:title="@string/parametres" android:id="@+id/paramaters">
         <menu>
             <item  android:id="@+id/language"
                 android:title="@string/language"/>
@@ -35,6 +35,7 @@
 
 
 </group>
+
 
 
 
