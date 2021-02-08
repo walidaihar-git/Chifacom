@@ -1,0 +1,97 @@
+<resources>
+    <string name="app_name">Chifacom</string>
+    <string name="nouveau_membre_s_inscrire">Nouveau membre ? S\'inscrire !</string>
+    <string name="bienvenu_en_chifacom_app">Bienvenu en Chifacom app</string>
+    <string name="choisir_votre_language">Choisissez votre langue</string>
+    <string name="soumettre">Soumettre</string>
+    <string name="pour_les_docteurs">pour les docteurs</string>
+    <string name="s_identifier">S\'identifier</string>
+    <string name="votre_email_ici">Votre Email ici</string>
+    <string name="votre_mot_de_passe_ici">Votre Mot de passe ici</string>
+
+    <string-array name="langs">
+        <item>Francais</item>
+        <item>العربية</item>
+        <item>English</item>
+
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <!--    <string name="hello_blank_fragment">Hello blank fragment</string>-->
+    <string name="je_suis_un_une">Je suis un/une ..</string>
+    <string name="docteur">Docteur</string>
+    <string name="cabinet">Cabinet</string>
+    <string name="clinique">Clinique</string>
+    <string name="personal_informations">Informations personnelles</string>
+    <string name="nom">Nom</string>
+    <string name="prenom">Prenom</string>
+    <string name="specialite">Specialite</string>
+    <string name="birth_date_place">Date de naissance</string>
+    <string name="email_electronique">Email Electronique</string>
+    <string name="numero_de_telephone">Numero de telephone</string>
+    <string name="suivant">Suivant</string>
+    <string name="adresse_et_localisation">Adresse et localisation</string>
+    <string name="ecriver_votre_adresse">Ecriver votre adresse</string>
+    <string name="se_situer_sur_google_maps">Se situer sur google maps</string>
+    <string name="informations_d_identit">Informations d\'identité</string>
+    <string name="scannez_votre_carte_d_identit_biom_trique">Scannez votre carte d\'identité biométrique</string>
+    <string name="cliquez_à_nouveau_pour_quitter">cliquez à nouveau pour quitter</string>
+    <string name="signin">S\'Authentifier</string>
+    <string name="forgetPassword">Mot de passe Oublié ?</string>
+    <string name="title_activity_maps">Map</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="bienvenu_dr">Bienvenu Dr</string>
+    <string name="t_l_chargez_votre_photo">téléchargez votre photo</string>
+    <string name="doctor_fullname">Doctor FullName</string>
+    <string name="r_cup_ration_du_mot_de_passe">Récupération du mot de passe</string>
+    <string name="envoyer_le_code">Envoyer le code</string>
+    <string name="entrer_le_code">Entrer le code</string>
+    <string name="contiennent_six_chiffres">contiennent 6 chiffres</string>
+    <string name="nouveau_mot_de_passe">Nouveau Mot de passe</string>
+    <string name="recupirer">Recupirer</string>
+    <string name="r_crire_ici">réécrire ici</string>
+    <string name="vous_tes_pr_t">Vous êtes prêt !</string>
+    <string name="language">Language</string>
+    <string name="bienvenu_docteur">Bienvenue Docteur</string>
+    <string name="nous_esp_rons_que_vous_aurez_une_meilleure_exp_rience_avec_nous">Nous espérons que vous aurez une meilleure expérience avec nous</string>
+    <string name="aller_ton_profil">Aller à ton profil</string>
+    <string name="personnalisez_votre_profil_et_engagez_vous_pour_de_nouvelles_demandes">personnalisez votre profil et engagez-vous pour de nouvelles demandes</string>
+    <string name="commencez_utiliser_notre_application">Commencez à utiliser notre application</string>
+    <string name="accueil">Accueil</string>
+    <string name="sales">Sales</string>
+    <string name="ils_attendent_visiter_les_salles_et_contr_ler_votre_travail">Ils attendent ! visiter les salles et contrôler votre travail</string>
+    <string name="nom_de_docteur">Nom de Docteur</string>
+    <string name="ce_texte_est_pour_la_bio_du_m_decin">Ce texte est pour la bio du médecin</string>
+    <string name="domaine">Domaine</string>
+    <string name="information">INFORMATION</string>
+    <string name="active_n_sam_dim_lun">Active <br /> Sam, Dim, Lun</string>
+    <string name="pays_n_province">Pays <br /> Province</string>
+    <string name="annuler">Annuler</string>
+    <string name="enregistrer">Enregistrer</string>
+    <string name="creer_une_salle">Creer Une salle</string>
+    <string name="nom_de_salle">Nom de salle</string>
+    <string name="jours_actifs_dans_la_salle">Jours actifs dans la salle</string>
+    <string name="ouvrir_la_calendrier">Ouvrir la calendrier</string>
+    <string name="lieu_de_naissance">Lieu de naissance</string>
+    <string name="date_lieu_de_naissance">Date/Lieu de naissance</string>
+    <string name="state">state</string>
+    <string name="province">province</string>
+    <string name="inserer_votre_photo">Inserer Votre Photo</string>
+    <string name="nom_d_utilisateur">Nom d\'utilisateur</string>
+    <string name="mot_de_passe">Mot de passe</string>
+    <string name="attendez">attendez s\'il vous plais</string>
+    <string name="title_activity_mark_address_maps" translatable="false">Map</string>
+    <string name="biographie">Biographie</string>
+    <string name="some_text">some text</string>
+    <string name="plan_de_travail">Plan de travail</string>
+    <string name="visitez_vos_clients">visitez vos clients</string>
+    <string name="modifier_votre_calendrier">modifier votre calendrier</string>
+    <string name="page_de_contr_le">page de contrôle</string>
+    <string name="organiser_votre_travail">organiser votre travail</string>
+    <string name="calendrier">Calendrier</string>
+    <string name="actions">Actions</string>
+    <string name="allez_au_rendez_vous">Allez au rendez-vous !</string>
+    <string name="ajouter_une_domaine">Ajouter une domaine</string>
+    <string name="r_seaux_sociaux">Réseaux sociaux</string>
+
+</resources>
