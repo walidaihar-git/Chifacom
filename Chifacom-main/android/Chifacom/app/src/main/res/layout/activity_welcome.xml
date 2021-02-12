@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".WelcomeActivity">
+
+
+    <ImageView
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:src="@drawable/chifacom_logo2"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"/>
+
+    <TextView
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="wrap_content"
+        android:text="@string/bienvenu_en_chifacom_app"
+        android:textAlignment="center"
+        android:fontFamily="@font/nexa_light"
+        android:textSize="@dimen/_16sdp"
+        android:textColor="@color/blue"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_70sdp"/>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/useApp"
+        android:layout_width="@dimen/_110sdp"
+        android:layout_height="wrap_content"
+        android:text="@string/utiliser_l_application"
+        android:textSize="@dimen/_12sdp"
+        android:textAllCaps="false"
+        android:fontFamily="@font/nexabold"
+        android:textColor="@color/blue"
+        android:background="@drawable/circle_transparent"
+        />
+
+
+</LinearLayout>
