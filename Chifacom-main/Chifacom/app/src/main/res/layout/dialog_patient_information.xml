@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center">
+
+    <LinearLayout
+        android:id="@+id/dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="@drawable/dialog_bg"
+        android:layout_margin="@dimen/_20sdp"
+        android:padding="@dimen/_25sdp"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:id="@+id/nameLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nexabold"
+            android:padding="@dimen/_8sdp"
+            android:text="Name"
+            android:textColor="@color/blueBack"
+            android:textSize="@dimen/_14ssp" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nexa_light"
+            android:text="younes younes"
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@android:color/black"/>
+
+        <TextView
+            android:id="@+id/ageLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nexabold"
+            android:padding="@dimen/_8sdp"
+            android:text="Age"
+            android:textColor="@color/blueBack"
+            android:textSize="@dimen/_14ssp" />
+
+        <TextView
+            android:id="@+id/age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nexa_light"
+            android:padding="@dimen/_8sdp"
+            android:text="20 y.o"
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@android:color/black"/>
+
+        <TextView
+            android:id="@+id/phoneLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nexabold"
+            android:padding="@dimen/_8sdp"
+            android:text="Phone number"
+            android:textSize="@dimen/_14ssp"
+            android:textColor="@color/blueBack"/>
+
+        <TextView
+            android:id="@+id/phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nexa_light"
+            android:padding="@dimen/_8sdp"
+            android:text="06........"
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@android:color/black"/>
+
+        <TextView
+            android:id="@+id/descriptionLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nexabold"
+            android:padding="@dimen/_8sdp"
+            android:text="description"
+            android:textSize="@dimen/_14ssp"
+            android:textColor="@color/blueBack"/>
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nexa_light"
+            android:padding="@dimen/_8sdp"
+            android:text="gripe  : '("
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@android:color/black"/>
+
+    </LinearLayout>
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dialog"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"/>
+
+</RelativeLayout>

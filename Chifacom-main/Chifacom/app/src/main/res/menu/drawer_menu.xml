@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view"
+    >
+    <item android:title="@string/compte" android:id="@+id/compte" >
+        <menu>
+            <item  android:id="@+id/inbox"
+                android:title="Boîte de réception"/>
+            <item  android:id="@+id/rdv"
+                android:title="Rendez_vous"/>
+            <item  android:id="@+id/profile"
+                android:title="Profile"/>
+        </menu>
+    </item>
+
+    <item android:title="@string/parametres" android:id="@+id/paramaters">
+        <menu>
+            <item  android:id="@+id/language"
+                android:title="@string/language"/>
+            <item  android:id="@+id/help"
+                android:title="Aide"/>
+            <item  android:id="@+id/security"
+                android:title="Compte et Securite"/>
+
+        </menu>
+    </item>
+
+<group android:checkableBehavior="single">
+
+    <item
+        android:id="@+id/about"
+        android:title="@string/propos_de"/>
+    <item
+        android:id="@+id/logout"
+        android:title="@string/se_deconnecter"/>
+
+
+</group>
+
+
+
+
+</menu>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".register.FirstStepFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/backtologin"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:src="@drawable/ic_baseline_arrow_left_24"
+            />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/s_inscrire"
+                android:textColor="@color/blueBack"
+                android:textSize="@dimen/_25ssp"
+                android:fontFamily="@font/nexabold"
+                android:layout_marginBottom="@dimen/_10sdp"
+                />
+
+            <TextView
+                android:id="@+id/label2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/creer_un_nouveau_compte"
+                android:textColor="#7d7d7d"
+                android:textSize="@dimen/_12ssp"
+                android:fontFamily="@font/nexabold"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp"/>
+
+            <LinearLayout
+                android:id="@+id/doctorNav"
+                android:layout_width="@dimen/_180sdp"
+                android:layout_height="@dimen/_130sdp"
+                android:gravity="center"
+                android:padding="@dimen/_10sdp"
+                android:background="@drawable/language_1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_height="@dimen/_60sdp"
+                    android:src="@drawable/doctor"
+
+
+                    />
+
+                <TextView
+                    android:id="@+id/doctorNavLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/docteur"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/nexa_light"
+                    android:textSize="@dimen/_22ssp" />
+
+
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:id="@+id/cabinetNav"
+                android:layout_width="@dimen/_180sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+<ImageView
+    android:layout_width="@dimen/_23sdp"
+    android:layout_height="@dimen/_23sdp"
+    android:src="@drawable/cabinet"/>
+
+                <TextView
+                    android:id="@+id/cabinetNavLabel"
+                    android:layout_width="@dimen/_90sdp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cabinet_n_bient_t_disponible"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/nexa_light"
+                    android:textSize="@dimen/_10ssp" />
+
+
+            </LinearLayout>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/nextstep"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_45sdp"
+               android:text="@string/suivant"
+                android:textColor="@color/blue"
+                android:textAllCaps="false"
+                android:fontFamily="@font/nexabold"
+                android:background="@drawable/circle_transparent"
+                android:enabled="false"
+
+
+                />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</FrameLayout>
