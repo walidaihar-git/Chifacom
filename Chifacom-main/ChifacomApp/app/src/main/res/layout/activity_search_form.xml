@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SearchFormActivity">
+
+
+
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:src="@drawable/chifacom_logo2"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/recherche_de_m_decins"
+            android:textColor="@color/loadingBack"
+            android:fontFamily="@font/nexabold"
+            android:textSize="@dimen/_15ssp"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"/>
+
+        <LinearLayout
+            android:id="@+id/linearName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:src="@drawable/name"
+                />
+            <EditText
+                android:id="@+id/fullName"
+                android:layout_width="@dimen/_180sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:hint="@string/nom_complet_du_medecin"
+                android:textSize="@dimen/_10ssp"
+                android:padding="@dimen/_7sdp"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:background="@drawable/gray_input"
+                />
+
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_15sdp"/>
+
+        <LinearLayout
+            android:id="@+id/linearCabinet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:src="@drawable/cabinet"
+                />
+            <EditText
+                android:id="@+id/cabinet"
+                android:layout_width="@dimen/_180sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:hint="@string/nom_du_cabinet"
+                android:textSize="@dimen/_10ssp"
+                android:padding="@dimen/_7sdp"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:background="@drawable/gray_input"
+                />
+
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_15sdp"/>
+
+        <LinearLayout
+            android:id="@+id/linearSpeciality"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:src="@drawable/speciality"
+                />
+            <EditText
+                android:id="@+id/speciality"
+                android:layout_width="@dimen/_180sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:hint="@string/domaine_medicale"
+                android:textSize="@dimen/_10ssp"
+                android:padding="@dimen/_7sdp"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:background="@drawable/gray_input"
+                />
+
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_15sdp"/>
+
+        <LinearLayout
+            android:id="@+id/linearLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:src="@drawable/location"
+                />
+            <EditText
+                android:id="@+id/state"
+                android:layout_width="@dimen/_87sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:hint="@string/etat"
+                android:textSize="@dimen/_10ssp"
+                android:padding="@dimen/_7sdp"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:background="@drawable/gray_input"
+                />
+            <EditText
+                android:id="@+id/province"
+                android:layout_width="@dimen/_87sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:hint="@string/province"
+                android:textSize="@dimen/_10ssp"
+                android:padding="@dimen/_7sdp"
+                android:layout_marginHorizontal="@dimen/_3sdp"
+                android:background="@drawable/gray_input"
+                />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_15sdp"/>
+
+        <LinearLayout
+            android:id="@+id/linearTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:src="@drawable/clock"
+                />
+            <EditText
+                android:id="@+id/clock"
+                android:layout_width="@dimen/_180sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:hint="le medecin le plus proche"
+                android:textSize="@dimen/_10ssp"
+                android:padding="@dimen/_7sdp"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:background="@drawable/gray_input"
+                />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_15sdp"/>
+
+        <LinearLayout
+            android:id="@+id/linearMoney"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:src="@drawable/money"
+                />
+            <EditText
+                android:id="@+id/Price"
+                android:layout_width="@dimen/_180sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:hint="@string/prix"
+                android:textSize="@dimen/_10ssp"
+                android:padding="@dimen/_7sdp"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:background="@drawable/gray_input"
+                />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_20sdp"/>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/searchBtn"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@drawable/search_group"
+            />
+
+    </LinearLayout>
+
+    <include layout="@layout/activity_doctors_list"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

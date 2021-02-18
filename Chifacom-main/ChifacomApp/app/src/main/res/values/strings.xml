@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">ChifacomApp</string>
+    <string name="chifacom_avec_vous_pour_n_facilite">Chifacom avec vous pour \n facilite</string>
+    <string name="bienvenu">Bienvenu</string>
+    <string name="recherche_de_m_decins">Recherche de médecins</string>
+    <string name="rdv_et_notifs">Rdv et Notifs</string>
+    <string name="connexion_et_inscription">Connexion et Inscription</string>
+    <string name="partager_l_application">Partager L\'application</string>
+    <string name="nom_complet_du_medecin">Nom complet du Medecin</string>
+    <string name="nom_du_cabinet">Nom du Cabinet</string>
+    <string name="domaine_medicale">Domaine Medicale</string>
+    <string name="etat">Etat</string>
+    <string name="province">Province</string>
+    <string name="prix">Prix</string>
+</resources>

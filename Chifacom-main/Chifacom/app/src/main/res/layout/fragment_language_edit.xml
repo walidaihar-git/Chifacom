@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".doctor.LanguageEditFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/_50sdp"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Paramaters"
+            android:textColor="@color/blue"
+            android:fontFamily="@font/nexabold"
+            android:textSize="@dimen/_20ssp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Language"
+            android:fontFamily="@font/nexabold"
+            android:textSize="@dimen/_10ssp"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"/>
+       <RadioGroup
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content">
+
+           <RadioButton
+               android:id="@+id/arab"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Arabe"
+               android:fontFamily="@font/nexabold"
+               android:textColor="@color/darkGray"
+               android:textSize="@dimen/_18ssp"
+               />
+           <RadioButton
+               android:id="@+id/francais"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Francais"
+               android:fontFamily="@font/nexabold"
+               android:textColor="@color/darkGray"
+               android:textSize="@dimen/_18ssp"
+               />
+
+       </RadioGroup>
+
+
+    </LinearLayout>
+
+</FrameLayout>

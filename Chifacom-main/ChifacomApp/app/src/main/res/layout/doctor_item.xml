@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/Docitem"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/_4sdp">
+
+        <ImageView
+            android:id="@+id/doctorPicture"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:src="@drawable/profile"
+            android:padding="@dimen/_2sdp"/>
+
+        <TextView
+            android:id="@+id/doctorFullname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="firstname lastname"
+            android:textColor="@color/loadingBack"
+            android:fontFamily="@font/nexa_light"
+            android:layout_toEndOf="@id/doctorPicture"
+            android:layout_alignParentTop="true"
+            android:textSize="@dimen/_12ssp"
+            android:layout_marginStart="@dimen/_8sdp"
+            />
+
+        <TextView
+            android:id="@+id/doctorSpeciality"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Speciality"
+            android:textColor="@color/black"
+            android:fontFamily="@font/nexa_light"
+            android:layout_toEndOf="@id/doctorPicture"
+            android:layout_below="@id/doctorFullname"
+            android:textSize="@dimen/_15ssp"
+            android:layout_marginStart="@dimen/_8sdp"
+
+            />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

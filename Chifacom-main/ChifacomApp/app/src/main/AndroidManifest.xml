@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="serive.algeria.chifacomapp">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/chifacom"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/chifacom"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ChifacomApp">
+        <activity android:name=".doctors.DoctorsList" />
+        <activity android:name=".SearchFormActivity" />
+        <activity android:name=".WelcomeActivity" />
+        <activity android:name=".FirstRunActivity" />
+        <activity android:name=".LoadingActivity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
