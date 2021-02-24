@@ -1,5 +1,6 @@
 package serive.algeria.chifacom.register;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
@@ -51,6 +52,7 @@ import serive.algeria.chifacom.Constants;
 import serive.algeria.chifacom.ConstantsAddress;
 import serive.algeria.chifacom.DoctorPrefManager;
 import serive.algeria.chifacom.IonBackPressed;
+import serive.algeria.chifacom.MapsActivity;
 import serive.algeria.chifacom.R;
 import serive.algeria.chifacom.doctor.DoctorMainActivity;
 
@@ -457,7 +459,7 @@ public class FifthStepFragment extends Fragment implements IonBackPressed{
         final String lat = "36.52306169788467";
         final String longt = " 6.26314185637305";
 
-        Log.d("register createNewDoctor", firstname + " - " + firstnameAR + " - " + lastname + " - " + lastnameAR
+        Log.d("register", "createNewDoctor "+firstname + " - " + firstnameAR + " - " + lastname + " - " + lastnameAR
                 + " - " +birthday+ " - " +birthplace+ " - " +phone
                 + " - " +username+ " - " +password
                 + " - " +speciality+ " - " +email);
@@ -484,24 +486,8 @@ public class FifthStepFragment extends Fragment implements IonBackPressed{
                             Log.d("register", error + " - " + message);
 
                             progressDialog.dismiss();
-                            Fragment fragment = new SeventhStepFragment();
-                            /*
-                            if (bundle != null) {
-                                bundle.putString("email", email.getText().toString().trim());
-                                bundle.putString("speciality", speciality.getText().toString().trim());
-                            }
-                            fragment.setArguments(bundle);
-                            */
-
-                            FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-                            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                            TextView txt =  getActivity().findViewById(R.id.step); txt.setText("Etap 7/7 :");
-                            TextView txt2 = getActivity().findViewById(R.id.stepLabel); txt2.setText("Address et Localisation ");
-                            fragmentTransaction.setCustomAnimations(R.anim.slide_in_right,R.anim.slide_out_left);
-                            getActivity().findViewById(R.id.step7).setBackgroundColor(getResources().getColor(R.color.blueBack));
-                            fragmentTransaction.replace(R.id.fragment_container, fragment);
-                            fragmentTransaction.addToBackStack(null);
-                            fragmentTransaction.commit();
+                            startActivity(new Intent(getContext(), MapsActivity.class));
+                            ((Activity)getContext()).finish();
 
                         }
                     }
