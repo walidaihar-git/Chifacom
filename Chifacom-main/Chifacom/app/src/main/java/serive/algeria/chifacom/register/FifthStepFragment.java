@@ -3,6 +3,7 @@ package serive.algeria.chifacom.register;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.location.Address;
 import android.location.Geocoder;
 import android.os.Bundle;
@@ -13,6 +14,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Handler;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,6 +36,7 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -46,8 +49,10 @@ import java.util.Map;
 
 import serive.algeria.chifacom.Constants;
 import serive.algeria.chifacom.ConstantsAddress;
+import serive.algeria.chifacom.DoctorPrefManager;
 import serive.algeria.chifacom.IonBackPressed;
 import serive.algeria.chifacom.R;
+import serive.algeria.chifacom.doctor.DoctorMainActivity;
 
 import static serive.algeria.chifacom.ConstantsAddress.wilayas;
 
@@ -127,6 +132,23 @@ public class FifthStepFragment extends Fragment implements IonBackPressed{
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_fifth_step, container, false);
         bundle = this.getArguments();
+        if (bundle != null) {
+            final String firstname = bundle.getString("fname", "");
+            final String firstnameAR = bundle.getString("fnameAR", "");
+            final String lastname = bundle.getString("lname", "");
+            final String lastnameAR = bundle.getString("lnameAR", "");
+            final String birthday = bundle.getString("birthday","");
+            final String birthplace = bundle.getString("birthplace","");
+            final String phone = bundle.getString("phone","");
+            final String username = bundle.getString("username","");
+            final String password =bundle.getString("password","");
+            final String speciality = bundle.getString("speciality","");
+            final String email = bundle.getString("email","");
+            Log.d("register", firstname + " - " + firstnameAR + " - " + lastname + " - " + lastnameAR
+                    + " - " +birthday+ " - " +birthplace+ " - " +phone
+                    + " - " +username+ " - " +password
+                    + " - " +speciality+ " - " +email);
+        }
         progressDialog = new ProgressDialog(getContext());
         sydney = new LatLng(31.081249, 3.427809); // ALGERIA LATLNG
         geocoder = new Geocoder(getActivity());
@@ -256,8 +278,8 @@ public class FifthStepFragment extends Fragment implements IonBackPressed{
 //                        .commit();
 //                getActivity().findViewById(R.id.step4).setBackgroundColor(getResources().getColor(R.color.blueBack));
 
-
-                createNewDoctor();
+                createDoctor();
+                //createNewDoctor();
             }
         });
 
@@ -275,9 +297,6 @@ public class FifthStepFragment extends Fragment implements IonBackPressed{
             return false;
         }
     }
-
-
-
 
     private void addBaladias() {
         baladias.add(ConstantsAddress.commune_Adrar);
@@ -330,6 +349,7 @@ public class FifthStepFragment extends Fragment implements IonBackPressed{
         baladias.add(ConstantsAddress.commune_Relizane);
 
     }
+
     public void createNewDoctor(){
         final String firstname = bundle.getString("fname","");
         final String firstnameAR = bundle.getString("fnameAR","");
@@ -351,6 +371,10 @@ public class FifthStepFragment extends Fragment implements IonBackPressed{
         final String longt = " 6.26314185637305";
         //  final int debitC = Integer.parseInt(debit);
         //int store_id= Integer.parseInt(storeId.getText().toString().trim());
+        Log.d("createNewDoctor", firstname + " - " + firstnameAR + " - " + lastname + " - " + lastnameAR
+                + " - " +birthday+ " - " +birthplace+ " - " +phone
+                + " - " +username+ " - " +password
+                + " - " +speciality+ " - " +email);
 
         progressDialog.setMessage(getString(R.string.attendez));
         progressDialog.show();
@@ -411,6 +435,114 @@ public class FifthStepFragment extends Fragment implements IonBackPressed{
 
         RequestQueue requestQueue = Volley.newRequestQueue(getContext());
         requestQueue.add(stringRequest);
+    }
+
+    private void createDoctor() {
+        final String firstname = bundle.getString("fname","");
+        final String firstnameAR = bundle.getString("fnameAR","");
+        final String lastname = bundle.getString("lname","");
+        final String lastnameAR = bundle.getString("lnameAR","");
+        final String speciality = bundle.getString("speciality","");
+        final String birthday = bundle.getString("birthday","");
+        final String birthplace = bundle.getString("birthplace","");
+        final String email = bundle.getString("email","");
+        final String phone = bundle.getString("phone","");
+        final String username = bundle.getString("username","");
+        final String password =bundle.getString("password","");
+        final String type = "doctor";
+        final String location = "cite djenaine";
+        final String province = "sidi merouane";
+        final String state = "mila";
+        final String link = "https://www.google.com/maps/place/Constantine+Province/@36.5227989,6.262338,497m/data=!3m1!1e3!4m5!3m4!1s0x12f10cb470246509:0x5e2ae1969309f737!8m2!3d36.3373911!4d6.663812";
+        final String lat = "36.52306169788467";
+        final String longt = " 6.26314185637305";
+
+        Log.d("register createNewDoctor", firstname + " - " + firstnameAR + " - " + lastname + " - " + lastnameAR
+                + " - " +birthday+ " - " +birthplace+ " - " +phone
+                + " - " +username+ " - " +password
+                + " - " +speciality+ " - " +email);
+
+        progressDialog.setMessage(getString(R.string.attendez));
+        progressDialog.show();
+
+        StringRequest stringRequest=new StringRequest(Request.Method.DEPRECATED_GET_OR_POST, Constants.URL_ROGISTER, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                Log.d("register",response);
+                try {
+                    JSONArray values =new JSONArray(response);
+                    if(values.length() == 0){
+                        Log.d("register"," 0 ");
+                        progressDialog.dismiss();
+                    }else {
+                        for (int i = 0; i < values.length(); i++) {
+                            JSONObject object = values.getJSONObject(i);
+
+                            String error = object.getString("error");
+                            String message = object.getString("message");
+
+                            Log.d("register", error + " - " + message);
+
+                            progressDialog.dismiss();
+                            Fragment fragment = new SeventhStepFragment();
+                            /*
+                            if (bundle != null) {
+                                bundle.putString("email", email.getText().toString().trim());
+                                bundle.putString("speciality", speciality.getText().toString().trim());
+                            }
+                            fragment.setArguments(bundle);
+                            */
+
+                            FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                            TextView txt =  getActivity().findViewById(R.id.step); txt.setText("Etap 7/7 :");
+                            TextView txt2 = getActivity().findViewById(R.id.stepLabel); txt2.setText("Address et Localisation ");
+                            fragmentTransaction.setCustomAnimations(R.anim.slide_in_right,R.anim.slide_out_left);
+                            getActivity().findViewById(R.id.step7).setBackgroundColor(getResources().getColor(R.color.blueBack));
+                            fragmentTransaction.replace(R.id.fragment_container, fragment);
+                            fragmentTransaction.addToBackStack(null);
+                            fragmentTransaction.commit();
+
+                        }
+                    }
+                } catch (JSONException e) {
+                    Log.d("register"," JSONException "+e.getMessage());
+                    e.printStackTrace();
+                }
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Log.d("register"," VolleyError "+error.getMessage());
+                progressDialog.dismiss();
+            }
+        }) {
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                HashMap<String,String> params =new HashMap<>();
+                params.put("doctor_firstname",firstname);
+                params.put("doctor_lastname",lastname);
+                params.put("doctor_firstname_AR",firstnameAR);
+                params.put("doctor_lastname_AR",lastnameAR);
+                params.put("doctor_speciality",speciality);
+                params.put("birthdate",birthday);
+                params.put("birthplace",birthplace);
+                params.put("phone",phone);
+                params.put("office_mail",email);
+                params.put("office_username",username);
+                params.put("office_pass",password);
+                params.put("office_type",type);
+                params.put("office_location",location);
+                params.put("province",province);
+                params.put("state",state);
+                params.put("address_link",link);
+                params.put("address_lat",lat);
+                params.put("address_long",longt);
+                return params;
+            }
+        } ;
+        Volley.newRequestQueue(getContext()).add(stringRequest);
     }
 
 }
