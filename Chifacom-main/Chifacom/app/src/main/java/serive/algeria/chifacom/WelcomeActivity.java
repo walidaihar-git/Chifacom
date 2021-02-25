@@ -25,14 +25,23 @@ public class WelcomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
 
+        boolean firstStart = getSharedPreferences("prefs", MODE_PRIVATE).getBoolean("firstStart", true);
+
         useapp = findViewById(R.id.useApp);
         useapp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 useapp.setTextColor(Color.WHITE);
                 useapp.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.bg_signin_btn));
-               Intent intent = new Intent(WelcomeActivity.this, FirstRunActivity.class);// delete this and uncomment the code obove to make first run work
+
+                Intent intent;// delete this and uncomment the code obove to make first run work
+                if(firstStart){
+                    intent = new Intent(WelcomeActivity.this, FirstRunActivity.class);
+                }else{
+                    intent = new Intent(WelcomeActivity.this, LoginActivity.class);
+                }
                 startActivity(intent);
+
             }
         });
 
