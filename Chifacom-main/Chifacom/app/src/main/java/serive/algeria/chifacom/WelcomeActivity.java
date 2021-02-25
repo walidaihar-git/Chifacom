@@ -9,7 +9,11 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 
+import serive.algeria.chifacom.controle.Language;
+
 public class WelcomeActivity extends AppCompatActivity {
+
+    private Language language;
 
     AppCompatButton useapp;
 
@@ -23,6 +27,8 @@ public class WelcomeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        language = new Language(this);
+        language.setLocate(language.getLocale(),this);
         setContentView(R.layout.activity_welcome);
 
         boolean firstStart = getSharedPreferences("prefs", MODE_PRIVATE).getBoolean("firstStart", true);
