@@ -30,6 +30,7 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
+import serive.algeria.chifacom.controle.Language;
 import serive.algeria.chifacom.doctor.DoctorHomeActivity;
 import serive.algeria.chifacom.doctor.DoctorMainActivity;
 import serive.algeria.chifacom.forgetPass.ForgetPassActivity;
@@ -42,10 +43,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     ProgressDialog progressDialog;
 
+    private Language language;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        language = new Language(this);
+        language.setLocate(language.getLocale(),this);
         setContentView(R.layout.activity_login2);
 
         progressDialog = new ProgressDialog(this);
