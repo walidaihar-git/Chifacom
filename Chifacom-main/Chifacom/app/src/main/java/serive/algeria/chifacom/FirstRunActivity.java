@@ -52,6 +52,7 @@ public class FirstRunActivity extends AppCompatActivity {
         ar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                getSharedPreferences("prefs", MODE_PRIVATE).edit().putBoolean("firstStart", false).commit();
 //              ar.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.bg_signin_btn));
                 ar.setTextColor(Color.WHITE);
                 ar.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.language_2));
@@ -66,6 +67,7 @@ public class FirstRunActivity extends AppCompatActivity {
         fr.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                getSharedPreferences("prefs", MODE_PRIVATE).edit().putBoolean("firstStart", false).commit();
                 fr.setTextColor(Color.WHITE);
                 fr.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.language_2));
                 Intent intent = new Intent(FirstRunActivity.this, LoginActivity.class);// delete this and uncomment the code obove to make first run work
