@@ -79,13 +79,14 @@
         app:itemTextColor="#80767676"
         app:itemTextAppearance="@style/NexaTextViewStyle"
         android:fitsSystemWindows="true">
+
         <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_gravity="center"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom">
             <ImageView
-                android:layout_width="@dimen/_100sdp"
-                android:layout_height="@dimen/_40sdp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
                 android:src="@drawable/chifacom_logo2"
                 android:layout_alignParentBottom="true"
 

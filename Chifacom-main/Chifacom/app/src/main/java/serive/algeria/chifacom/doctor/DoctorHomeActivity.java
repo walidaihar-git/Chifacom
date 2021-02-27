@@ -29,17 +29,11 @@ public class DoctorHomeActivity extends AppCompatActivity implements View.OnClic
             }
         });
 
-
-
-
         profileNav = findViewById(R.id.profileNav);
         roomNav = findViewById(R.id.roomNav);
 
         profileNav.setOnClickListener(this);
         roomNav.setOnClickListener(this);
-
-
-
 
     }
 
@@ -54,7 +48,6 @@ public class DoctorHomeActivity extends AppCompatActivity implements View.OnClic
         if (v == roomNav){
             Intent intent = new Intent(DoctorHomeActivity.this, CreateRoomActivity.class);
             startActivity(intent);
-
         }
 
     }
@@ -68,7 +61,6 @@ public class DoctorHomeActivity extends AppCompatActivity implements View.OnClic
     }
 
     public int  hideSystemBars(){
-
 
         return View.SYSTEM_UI_FLAG_LAYOUT_STABLE
                 |View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY

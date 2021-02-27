@@ -19,7 +19,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Paramaters"
+            android:text="@string/parametres"
             android:textColor="@color/blue"
             android:fontFamily="@font/nexabold"
             android:textSize="@dimen/_20ssp"
@@ -27,7 +27,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Language"
+            android:text="@string/language"
             android:fontFamily="@font/nexabold"
             android:textSize="@dimen/_10ssp"
             />
@@ -36,14 +36,16 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/_30sdp"/>
        <RadioGroup
-           android:layout_width="wrap_content"
+           android:id="@+id/radio_group"
+           android:layout_width="match_parent"
            android:layout_height="wrap_content">
 
            <RadioButton
                android:id="@+id/arab"
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
-               android:text="Arabe"
+               android:text="عربي"
+               android:textAlignment="center"
                android:fontFamily="@font/nexabold"
                android:textColor="@color/darkGray"
                android:textSize="@dimen/_18ssp"
@@ -53,6 +55,7 @@
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
                android:text="Francais"
+               android:textAlignment="center"
                android:fontFamily="@font/nexabold"
                android:textColor="@color/darkGray"
                android:textSize="@dimen/_18ssp"
